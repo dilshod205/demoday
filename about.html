@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | FoodExpress</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="light-theme">
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <h1>Food<span>Express</span></h1>
+                    </a>
+                </div>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="restaurants.html">Рестораны</a></li>
+                        <li><a href="about.html">   О нас</a></li>
+                        <li><a href="contact.html">Контакт</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <button class="theme-toggle" id="themeToggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <div class="cart-icon">
+                        <a href="cart.html">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count" id="cartCount">0</span>
+                        </a>
+                    </div>
+                    <div class="user-actions">
+                        <a href="login.html" class="btn btn-outline" id="loginBtn">Login</a>
+                        <a href="register.html" class="btn btn-primary" id="registerBtn">Sign Up</a>
+                        <div class="user-profile hidden" id="userProfile">
+                            <img src="img/default-avatar.png" alt="User Profile" id="userAvatar">
+                            <div class="dropdown-menu">
+                                <a href="profile.html">Мой профиль</a>
+                                <a href="orders.html">История заказов</a>
+                                <a href="#" id="logoutBtn">Выход из системы</a>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="restaurants.html"> Рестораны</a></li>
+            <li><a href="about.html">О нас</a></li>
+            <li><a href="contact.html"> Контакт</a></li>
+            <li><a href="login.html">Логин</a></li>
+            <li><a href="register.html">Регистрироваться</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="about-hero">
+            <div class="container">
+                <div class="about-hero-content">
+                    <h1>О FoodExpress</h1>
+                    <p>Объединяем любителей еды с их любимыми ресторанами с 2018 года</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Story Section -->
+        <section class="our-story">
+            <div class="container">
+                <div class="story-content">
+                    <div class="story-text">
+                        <h2>Наша история</h2>
+                        <p>Компания FoodExpress была основана в 2018 году с простой миссией: сделать доставку еды удобной, надежной и приятной для всех.</p>
+                        <p>То, что начиналось как небольшой стартап всего с 5 ресторанами-партнерами в Нью-Йорке, теперь выросло в общенациональную службу с более чем 5000 ресторанов-партнеров в 50 городах.</p>
+                        <p>Наш путь подпитывается нашей страстью к еде и технологиям, а также нашей приверженностью предоставлению исключительного сервиса как нашим клиентам, так и партнерам-ресторанам.</p>
+                    </div>
+                    <div class="story-image">
+                        <img src="https://imgmediagumlet.lbb.in/media/2021/06/60d5c26132d36add5aa51cf1_1624621665441.jpeg" alt="FoodExpress Story">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Mission Section -->
+        <section class="our-mission">
+            <div class="container">
+                <h2 class="section-title">Наша миссия</h2>
+                <div class="mission-cards">
+                    <div class="mission-card">
+                        <div class="mission-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <h3>Качественная еда</h3>
+                        <p>Мы сотрудничаем с лучшими ресторанами, чтобы гарантировать доставку высококачественных и вкусных блюд прямо к вам домой.</p>
+                    </div>
+                    <div class="mission-card">
+                        <div class="mission-icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <h3>Быстрая доставка</h3>
+                        <p>Наша эффективная сеть доставки гарантирует, что ваша еда будет доставлена ​​горячей и свежей, как если бы вы обедали в ресторане.</p>
+                    </div>
+                    <div class="mission-card">
+                        <div class="mission-icon">
+                            <i class="fas fa-smile"></i>
+                        </div>
+                        <h3>Удовлетворенность клиентов</h3>
+                        <p>Мы стремимся обеспечить исключительный опыт при каждом заказе — от просмотра до доставки.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Team Section -->
+        <section class="our-team">
+            <div class="container">
+                <h2 class="section-title">Познакомьтесь с нашей командой</h2>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="member-image">
+                            <img src="https://llso.uchicago.edu/sites/default/files/styles/large/public/2023-01/IMG_4420.jpeg?h=d318f057&itok=-3_1475w" alt="Sarah Johnson">
+                        </div>
+                        <h3>Сара Джонсон</h3>
+                        <p class="member-role">CEO & Co-Founder</p>
+                        <p class="member-bio">У Сары более 15 лет опыта в пищевой и технологической промышленности. Она увлечена созданием инновационных решений, которые облегчают повседневную жизнь.</p>
+                        <div class="member-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <div class="member-image">
+                            <img src="https://static.wixstatic.com/media/45281b_c4363a6b9fad4d348378989dca653f90~mv2.jpg/v1/fill/w_640,h_554,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/45281b_c4363a6b9fad4d348378989dca653f90~mv2.jpg" alt="Michael Chen">
+                        </div>
+                        <h3>Майкл Чен</h3>
+                        <p class="member-role">Технический директор и соучредитель</p>
+                        <p class="member-bio">Майкл — энтузиаст технологий с опытом работы в области разработки программного обеспечения. Он руководит нашей командой разработчиков, создавая безупречный цифровой опыт.</p>
+                        <div class="member-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <div class="member-image">
+                            <img src="https://mae.ucdavis.edu/sites/g/files/dgvnsk6286/files/styles/sf_profile/public/media/images/jessica-rodriguez-420x480.jpg?h=21d1a2b8&itok=qkkrcdHp" alt="Jessica Rodriguez">
+                        </div>
+                        <h3>Джессика Родригес</h3>
+                        <p class="member-role">COO</p>
+                        <p class="member-bio">Джессика курирует нашу повседневную деятельность, следя за тем, чтобы мы выполняли свои обещания как клиентам, так и партнерам-ресторанам.</p>
+                        <div class="member-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <div class="member-image">
+                            <img src="https://www.ioes.ucla.edu/wp-content/uploads/2017/07/david-kim.jpg" alt="David Kim">
+                        </div>
+                        <h3>Дэвид Ким</h3>
+                        <p class="member-role">Руководитель партнерства</p>
+                        <p class="member-bio">Дэвид тесно сотрудничает с нашими ресторанами-партнерами для создания взаимовыгодных отношений, которые улучшают качество обслуживания в FoodExpress.</p>
+                        <div class="member-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats-section">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number" id="restaurantCount">5,000+</div>
+                        <div class="stat-label">Ресторан Партнеры</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" id="cityCount">50+</div>
+                        <div class="stat-label">Городов</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" id="customerCount">2M+</div>
+                        <div class="stat-label">Счастливых клиентов</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" id="deliveryCount">10M+</div>
+                        <div class="stat-label">Поставки завершены</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials">
+            <div class="container">
+                <h2 class="section-title">  Что люди говорят о нас</h2>
+                <div class="testimonial-slider" id="testimonialSlider">
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>«FoodExpress полностью изменил то, как я наслаждаюсь любимыми ресторанами. Доставка всегда вовремя, а еда приезжает горячей и свежей!»</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNumoGl-SEg1n773D5IHHxcIFqXK2O2Kp1ZA&s" alt="Emily S.">
+                            <div>
+                                <h4>Эмили С.</h4>
+                                <p>Нью-Йорк, Нью-Йорк</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>«Как владелец ресторана, партнерство с FoodExpress помогло нам привлечь новых клиентов и увеличить доход. Их платформа проста в использовании, а их команда всегда готова оказать поддержку».</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwe-G5Ofm1XOzdMEcbdocr8Cis-yaotDpPXA&s" alt="Robert T.">
+                            <div>
+                                <h4>Роберт Т.</h4>
+                                <p>Владелец ресторана</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>«Разнообразие ресторанов, доступных на FoodExpress, впечатляет. Я открыл для себя так много новых любимых мест, которые я бы никогда не посетил в противном случае!»</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://lastfm.freetls.fastly.net/i/u/ar0/671f5a0540e99d87a20662b7e52e2326.jpg" alt="Lisa M.">
+                            <div>
+                                <h4>Лиза М.</h4>
+                                <p>Чикаго, Иллинойс</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-controls">
+                    <button class="prev-btn" id="prevTestimonial"><i class="fas fa-chevron-left"></i></button>
+                    <div class="slider-dots" id="testimonialDots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                    <button class="next-btn" id="nextTestimonial"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Join Us Section -->
+        <section class="join-us">
+            <div class="container">
+                <div class="join-us-content">
+                    <h2>Присоединяйтесь к семье FoodExpress</h2>
+                    <p>Мы всегда ищем талантливых людей, которые присоединятся к нашей команде и помогут нам произвести революцию в индустрии доставки еды..</p>
+                    <div class="join-us-buttons">
+                        <a href="careers.html" class="btn btn-primary">Просмотр открытых позиций</a>
+                        <a href="partner.html" class="btn btn-outline">Станьте партнером ресторана</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Food<span>Express</span></h2>
+                    <p>Вкусная еда, доставлена ​​быстро</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="about.html">О нас</a></li>
+                            <li><a href="careers.html">Карьера</a></li>
+                            <li><a href="blog.html">Блог</a></li>
+                            <li><a href="contact.html">Связаться с нами</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>For Users</h3>
+                        <ul>
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="terms.html">Terms of Service</a></li>
+                            <li><a href="privacy.html">Privacy Policy</a></li>
+                            <li><a href="support.html">Support</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>For Restaurants</h3>
+                        <ul>
+                            <li><a href="partner.html">Become a Partner</a></li>
+                            <li><a href="restaurant-app.html">Restaurant App</a></li>
+                            <li><a href="restaurant-terms.html">Terms for Restaurants</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>Subscribe to our Newsletter</h3>
+                    <p>Get the latest offers and updates</p>
+                    <form id="newsletterForm">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 FoodExpress. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/about.js"></script>
+</body>
+</html>
+:
+

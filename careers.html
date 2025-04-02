@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Карьера | FoodExpress</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/careers.css">
+  <link rel="stylesheet" href="css/translate.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="light-theme">
+  <header>
+      <div class="container">
+          <div class="header-content">
+              <div class="logo">
+                  <a href="index.html">
+                      <h1>Food<span>Express</span></h1>
+                  </a>
+              </div>
+              <nav>
+                  <ul class="nav-links">
+                      <li><a href="restaurants.html">Рестораны</a></li>
+                      <li><a href="about.html">О нас</a></li>
+                      <li><a href="contact.html">Контакты</a></li>
+                  </ul>
+              </nav>
+              <div class="header-actions">
+                  <button class="theme-toggle" id="themeToggle">
+                      <i class="fas fa-moon"></i>
+                  </button>
+                  <div class="cart-icon">
+                      <a href="cart.html">
+                          <i class="fas fa-shopping-cart"></i>
+                          <span class="cart-count" id="cartCount">0</span>
+                      </a>
+                  </div>
+                  <div class="user-actions">
+                      <a href="login.html" class="btn btn-outline" id="loginBtn">Войти</a>
+                      <a href="register.html" class="btn btn-primary" id="registerBtn">Регистрация</a>
+                      <div class="user-profile hidden" id="userProfile">
+                          <img src="img/default-avatar.png" alt="Профиль пользователя" id="userAvatar">
+                          <div class="dropdown-menu">
+                              <a href="profile.html">Мой профиль</a>
+                              <a href="orders.html">История заказов</a>
+                              <a href="#" id="logoutBtn">Выйти</a>
+                          </div>
+                      </div>
+                  </div>
+                  <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                      <i class="fas fa-bars"></i>
+                  </button>
+              </div>
+          </div>
+      </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+      <ul>
+          <li><a href="restaurants.html">Рестораны</a></li>
+          <li><a href="about.html">О нас</a></li>
+          <li><a href="contact.html">Контакты</a></li>
+          <li><a href="login.html">Войти</a></li>
+          <li><a href="register.html">Регистрация</a></li>
+      </ul>
+  </div>
+
+  <main>
+      <!-- Герой-секция -->
+      <section class="careers-hero">
+          <div class="container">
+              <div class="careers-hero-content">
+                  <h1>Присоединяйтесь к нашей команде</h1>
+                  <p>Помогите нам революционизировать индустрию доставки еды</p>
+              </div>
+          </div>
+      </section>
+
+      <!-- Почему стоит присоединиться -->
+      <section class="why-join-us">
+          <div class="container">
+              <h2 class="section-title">Почему стоит присоединиться к FoodExpress?</h2>
+              <div class="benefits-grid">
+                  <div class="benefit-card">
+                      <div class="benefit-icon">
+                          <i class="fas fa-rocket"></i>
+                      </div>
+                      <h3>Возможности роста</h3>
+                      <p>Мы быстро растем, создавая бесконечные возможности для карьерного роста и профессионального развития.</p>
+                  </div>
+                  <div class="benefit-card">
+                      <div class="benefit-icon">
+                          <i class="fas fa-lightbulb"></i>
+                      </div>
+                      <h3>Культура инноваций</h3>
+                      <p>Мы поощряем творческое мышление и инновационные решения сложных проблем.</p>
+                  </div>
+                  <div class="benefit-card">
+                      <div class="benefit-icon">
+                          <i class="fas fa-users"></i>
+                      </div>
+                      <h3>Разнообразие и инклюзивность</h3>
+                      <p>Мы ценим разнообразие и создаем инклюзивную среду, где каждый может процветать.</p>
+                  </div>
+                  <div class="benefit-card">
+                      <div class="benefit-icon">
+                          <i class="fas fa-heart"></i>
+                      </div>
+                      <h3>Значимое влияние</h3>
+                      <p>Ваша работа будет напрямую влиять на миллионы клиентов и партнеров-ресторанов каждый день.</p>
+                  </div>
+                  <div class="benefit-card">
+                      <div class="benefit-icon">
+                          <i class="fas fa-balance-scale"></i>
+                      </div>
+                      <h3>Баланс работы и жизни</h3>
+                      <p>Мы ценим ваше личное время и предлагаем гибкие условия работы для поддержания баланса.</p>
+                  </div>
+                  <div class="benefit-card">
+                      <div class="benefit-icon">
+                          <i class="fas fa-gift"></i>
+                      </div>
+                      <h3>Отличные бонусы</h3>
+                      <p>Конкурентная зарплата, медицинская страховка, пенсионные планы и, конечно же, скидки на еду!</p>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+      <!-- Наши ценности -->
+      <section class="our-values">
+          <div class="container">
+              <h2 class="section-title">Наши ценности</h2>
+              <div class="values-container">
+                  <div class="value-item">
+                      <h3>Ориентация на клиента</h3>
+                      <p>Мы ставим наших клиентов на первое место во всем, что делаем, постоянно ища способы улучшить их опыт.</p>
+                  </div>
+                  <div class="value-item">
+                      <h3>Ответственность</h3>
+                      <p>Мы берем на себя ответственность за свою работу и действуем как владельцы, принимая решения, которые приносят долгосрочную пользу компании.</p>
+                  </div>
+                  <div class="value-item">
+                      <h3>Инновации</h3>
+                      <p>Мы принимаем изменения и постоянно ищем новые способы решения проблем и улучшения нашего сервиса.</p>
+                  </div>
+                  <div class="value-item">
+                      <h3>Совершенство</h3>
+                      <p>Мы стремимся к совершенству во всем, что делаем, устанавливая высокие стандарты и усердно работая для их достижения.</p>
+                  </div>
+                  <div class="value-item">
+                      <h3>Командная работа</h3>
+                      <p>Мы эффективно сотрудничаем между командами, ценим разнообразие взглядов и поддерживаем друг друга.</p>
+                  </div>
+                  <div class="value-item">
+                      <h3>Честность</h3>
+                      <p>Мы действуем честно и добросовестно, строя доверительные отношения с нашими клиентами, партнерами и друг с другом.</p>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+      <!-- Открытые вакансии -->
+      <section class="open-positions">
+          <div class="container">
+              <h2 class="section-title">Открытые вакансии</h2>
+              <div class="departments-filter">
+                  <button class="department-btn active" data-department="all">Все отделы</button>
+                  <button class="department-btn" data-department="engineering">Разработка</button>
+                  <button class="department-btn" data-department="product">Продукт</button>
+                  <button class="department-btn" data-department="marketing">Маркетинг</button>
+                  <button class="department-btn" data-department="operations">Операции</button>
+                  <button class="department-btn" data-department="customer-support">Поддержка клиентов</button>
+              </div>
+              
+              <div class="positions-list">
+                  <div class="position-card" data-department="engineering">
+                      <div class="position-info">
+                          <h3>Старший разработчик</h3>
+                          <div class="position-meta">
+                              <span><i class="fas fa-map-marker-alt"></i> Нью-Йорк, США (Доступна удаленная работа)</span>
+                              <span><i class="fas fa-briefcase"></i> Полная занятость</span>
+                          </div>
+                          <p>Мы ищем опытных разработчиков для создания и масштабирования нашей платформы. Вы будете работать над сложными задачами и помогать внедрять функции, которые влияют на миллионы пользователей.</p>
+                          <div class="position-tags">
+                              <span>React</span>
+                              <span>Node.js</span>
+                              <span>AWS</span>
+                              <span>Микросервисы</span>
+                          </div>
+                      </div>
+                      <div class="position-action">
+                          <a href="#" class="btn btn-primary">Откликнуться</a>
+                      </div>
+                  </div>
+                  
+                  <div class="position-card" data-department="product">
+                      <div class="position-info">
+                          <h3>Продуктовый менеджер</h3>
+                          <div class="position-meta">
+                              <span><i class="fas fa-map-marker-alt"></i> Сан-Франциско, США</span>
+                              <span><i class="fas fa-briefcase"></i> Полная занятость</span>
+                          </div>
+                          <p>Присоединяйтесь к нашей продуктовой команде, чтобы определять и реализовывать дорожную карту для наших пользовательских приложений. Вы будете тесно сотрудничать с инженерами, дизайнерами и бизнес-командами для создания исключительного пользовательского опыта.</p>
+                          <div class="position-tags">
+                              <span>Стратегия продукта</span>
+                              <span>Исследования пользователей</span>
+                              <span>Agile</span>
+                              <span>Аналитика</span>
+                          </div>
+                      </div>
+                      <div class="position-action">
+                          <a href="#" class="btn btn-primary">Откликнуться</a>
+                      </div>
+                  </div>
+                  
+                  <div class="position-card" data-department="marketing">
+                      <div class="position-info">
+                          <h3>Специалист по цифровому маркетингу</h3>
+                          <div class="position-meta">
+                              <span><i class="fas fa-map-marker-alt"></i> Чикаго, США</span>
+                              <span><i class="fas fa-briefcase"></i> Полная занятость</span>
+                          </div>
+                          <p>Мы ищем талантливого маркетолога, который поможет расширить нашу клиентскую базу через различные цифровые каналы. Вы будете отвечать за планирование и выполнение маркетинговых кампаний, которые привлекают новых пользователей и повышают их удержание.</p>
+                          <div class="position-tags">
+                              <span>SEO</span>
+                              <span>SEM</span>
+                              <span>Социальные сети</span>
+                              <span>Email-маркетинг</span>
+                          </div>
+                      </div>
+                      <div class="position-action">
+                          <a href="#" class="btn btn-primary">Откликнуться</a>
+                      </div>
+                  </div>
+                  
+                  <div class="position-card" data-department="operations">
+                      <div class="position-info">
+                          <h3>Менеджер операций</h3>
+                          <div class="position-meta">
+                              <span><i class="fas fa-map-marker-alt"></i> Майами, США</span>
+                              <span><i class="fas fa-briefcase"></i> Полная занятость</span>
+                          </div>
+                          <p>Присоединяйтесь к нашей операционной команде, чтобы помочь оптимизировать нашу сеть доставки и обеспечить бесперебойную работу. Вы будете работать над улучшением эффективности, сокращением времени доставки и повышением общего качества обслуживания клиентов.</p>
+                          <div class="position-tags">
+                              <span>Логистика</span>
+                              <span>Оптимизация процессов</span>
+                              <span>Анализ данных</span>
+                              <span>Управление командой</span>
+                          </div>
+                      </div>
+                      <div class="position-action">
+                          <a href="#" class="btn btn-primary">Откликнуться</a>
+                      </div>
+                  </div>
+                  
+                  <div class="position-card" data-department="customer-support">
+                      <div class="position-info">
+                          <h3>Специалист поддержки клиентов</h3>
+                          <div class="position-meta">
+                              <span><i class="fas fa-map-marker-alt"></i> Удаленная работа</span>
+                              <span><i class="fas fa-briefcase"></i> Полная/Частичная занятость</span>
+                          </div>
+                          <p>Мы ищем клиентоориентированных специалистов для нашей службы поддержки. Вы будете помогать решать проблемы клиентов, предоставлять исключительный сервис и вносить вклад в улучшение наших процессов поддержки.</p>
+                          <div class="position-tags">
+                              <span>Обслуживание клиентов</span>
+                              <span>Решение проблем</span>
+                              <span>Коммуникация</span>
+                              <span>Эмпатия</span>
+                          </div>
+                      </div>
+                      <div class="position-action">
+                          <a href="#" class="btn btn-primary">Откликнуться</a>
+                      </div>
+                  </div>
+              </div>
+              
+              <div class="no-positions-message hidden">
+                  <p>В настоящее время в этом отделе нет вакансий. Пожалуйста, проверьте позже или посмотрите другие отделы.</p>
+              </div>
+              
+              <div class="positions-cta">
+                  <p>Не нашли подходящую вакансию? Отправьте нам свое резюме в любом случае!</p>
+                  <a href="#" class="btn btn-outline">Отправить общую заявку</a>
+              </div>
+          </div>
+      </section>
+
+      <!-- Отзывы сотрудников -->
+      <section class="employee-testimonials">
+          <div class="container">
+              <h2 class="section-title">Жизнь в FoodExpress</h2>
+              <div class="testimonial-slider" id="testimonialSlider">
+                  <div class="testimonial-slide active">
+                      <div class="employee-testimonial">
+                          <div class="employee-image">
+                              <img src="/placeholder.svg?height=150&width=150" alt="Сара Джонсон">
+                          </div>
+                          <div class="testimonial-content">
+                              <p>"Работа в FoodExpress - это невероятное путешествие. Компания действительно ценит инновации и дает инженерам свободу для изучения новых технологий и решений. За два года здесь я выросла больше, чем за предыдущие пять лет в отрасли."</p>
+                              <div class="employee-info">
+                                  <h4>Сара Джонсон</h4>
+                                  <p>Старший разработчик, 2 года в компании</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="testimonial-slide">
+                      <div class="employee-testimonial">
+                          <div class="employee-image">
+                              <img src="/placeholder.svg?height=150&width=150" alt="Майкл Чен">
+                          </div>
+                          <div class="testimonial-content">
+                              <p>"Культура в FoodExpress не похожа ни на одну другую компанию, в которой я работал. Все увлечены нашей миссией и работают вместе для достижения целей. Руководство прозрачно и действительно заботится о благополучии и росте сотрудников."</p>
+                              <div class="employee-info">
+                                  <h4>Майкл Чен</h4>
+                                  <p>Продуктовый менеджер, 3 года в компании</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="testimonial-slide">
+                      <div class="employee-testimonial">
+                          <div class="employee-image">
+                              <img src="/placeholder.svg?height=150&width=150" alt="Прия Пател">
+                          </div>
+                          <div class="testimonial-content">
+                              <p>"Я начала стажером в FoodExpress и быстро получила значимые проекты и ответственность. Менторство, которое я получила, было бесценным, и теперь я руковожу собственной командой. Возможности для роста здесь реальны, а работа бросает вызов в лучшем смысле этого слова."</p>
+                              <div class="employee-info">
+                                  <h4>Прия Пател</h4>
+                                  <p>Руководитель операционной команды, 4 года в компании</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="slider-controls">
+                  <button class="prev-btn" id="prevTestimonial"><i class="fas fa-chevron-left"></i></button>
+                  <div class="slider-dots" id="testimonialDots">
+                      <span class="dot active"></span>
+                      <span class="dot"></span>
+                      <span class="dot"></span>
+                  </div>
+                  <button class="next-btn" id="nextTestimonial"><i class="fas fa-chevron-right"></i></button>
+              </div>
+          </div>
+      </section>
+
+      <!-- Процесс найма -->
+      <section class="application-process">
+          <div class="container">
+              <h2 class="section-title">Наш процесс найма</h2>
+              <div class="process-steps">
+                  <div class="process-step">
+                      <div class="step-number">1</div>
+                      <div class="step-content">
+                          <h3>Рассмотрение заявки</h3>
+                          <p>Наша команда по подбору персонала рассматривает ваше резюме и заявку для оценки вашей квалификации и опыта.</p>
+                      </div>
+                  </div>
+                  <div class="process-step">
+                      <div class="step-number">2</div>
+                      <div class="step-content">
+                          <h3>Первичное собеседование</h3>
+                          <p>30-45 минутный телефонный или видеозвонок с рекрутером для обсуждения вашего опыта, навыков и интереса к должности.</p>
+                      </div>
+                  </div>
+                  <div class="process-step">
+                      <div class="step-number">3</div>
+                      <div class="step-content">
+                          <h3>Техническая оценка</h3>
+                          <p>В зависимости от должности вам может быть предложено выполнить тестовое задание, кейс или техническое испытание.</p>
+                      </div>
+                  </div>
+                  <div class="process-step">
+                      <div class="step-number">4</div>
+                      <div class="step-content">
+                          <h3>Собеседования с командой</h3>
+                          <p>Серия собеседований с потенциальными коллегами и руководителями для оценки технических навыков и соответствия культуре компании.</p>
+                      </div>
+                  </div>
+                  <div class="process-step">
+                      <div class="step-number">5</div>
+                      <div class="step-content">
+                          <h3>Финальное собеседование</h3>
+                          <p>Беседа с руководителем высшего звена для обсуждения ваших карьерных целей и того, как вы можете внести вклад в развитие FoodExpress.</p>
+                      </div>
+                  </div>
+                  <div class="process-step">
+                      <div class="step-number">6</div>
+                      <div class="step-content">
+                          <h3>Оффер и адаптация</h3>
+                          <p>Если вы выбраны, вы получите предложение о работе и начнете нашу комплексную программу адаптации для успешного старта.</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+      <!-- Часто задаваемые вопросы -->
+      <section class="careers-faq">
+          <div class="container">
+              <h2 class="section-title">Часто задаваемые вопросы</h2>
+              <div class="faq-container">
+                  <div class="faq-item">
+                      <div class="faq-question">
+                          <h3>Как проходит процесс собеседования?</h3>
+                          <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                      </div>
+                      <div class="faq-answer">
+                          <p>Наш процесс собеседования обычно включает первичный телефонный разговор, затем техническую оценку и серию собеседований с членами команды и руководителями. Весь процесс обычно занимает 2-3 недели, в зависимости от должности и графика.</p>
+                      </div>
+                  </div>
+                  <div class="faq-item">
+                      <div class="faq-question">
+                          <h3>Предлагаете ли вы удаленную работу?</h3>
+                          <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                      </div>
+                      <div class="faq-answer">
+                          <p>Да, мы предлагаем удаленную работу для многих должностей. Некоторые позиции могут требовать периодического присутствия в офисе или быть привязаны к локации из-за характера работы. Каждое описание вакансии указывает требования к месту работы.</p>
+                      </div>
+                  </div>
+                  <div class="faq-item">
+                      <div class="faq-question">
+                          <h3>Какие льготы вы предлагаете?</h3>
+                          <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                      </div>
+                      <div class="faq-answer">
+                          <p>Мы предлагаем комплексный пакет льгот, включая медицинскую, стоматологическую и офтальмологическую страховку, пенсионные накопления, оплачиваемый отпуск, декретный отпуск, гибкий график работы, стипендии на профессиональное развитие и, конечно же, бонусы на доставку еды!</p>
+                      </div>
+                  </div>
+                  <div class="faq-item">
+                      <div class="faq-question">
+                          <h3>Сколько времени занимает процесс подачи заявки?</h3>
+                          <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                      </div>
+                      <div class="faq-answer">
+                          <p>Мы стремимся к быстрому процессу найма. Обычно вы можете ожидать ответа в течение 1-2 недель после подачи заявки. Весь процесс от подачи заявки до предложения обычно занимает 3-4 недели, хотя это может варьироваться в зависимости от должности и потребностей в найме.</p>
+                      </div>
+                  </div>
+                  <div class="faq-item">
+                      <div class="faq-question">
+                          <h3>Какая культура в компании?</h3>
+                          <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                      </div>
+                      <div class="faq-answer">
+                          <p>Наша культура динамична, инновационна и ориентирована на сотрудничество. Мы ценим разнообразие мнений, поощряем открытое общение и вместе празднуем успехи. Мы много работаем, но также уделяем внимание балансу между работой и личной жизнью и получаем удовольствие от процесса. Наша команда увлечена миссией преобразования опыта доставки еды.</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+      <!-- Призыв к действию -->
+      <section class="careers-cta">
+          <div class="container">
+              <div class="cta-content">
+                  <h2>Готовы присоединиться к нашей команде?</h2>
+                  <p>Изучите наши открытые вакансии и сделайте первый шаг к захватывающей карьере в FoodExpress.</p>
+                  <a href="#open-positions" class="btn btn-primary">Посмотреть вакансии</a>
+              </div>
+          </div>
+      </section>
+  </main>
+
+  <footer>
+      <div class="container">
+          <div class="footer-content">
+              <div class="footer-logo">
+                  <h2>Food<span>Express</span></h2>
+                  <p>Вкусная еда, доставленная быстро</p>
+              </div>
+              <div class="footer-links">
+                  <div class="footer-column">
+                      <h3>Компания</h3>
+                      <ul>
+                          <li><a href="about.html">О нас</a></li>
+                          <li><a href="careers.html">Карьера</a></li>
+                          <li><a href="blog.html">Блог</a></li>
+                          <li><a href="contact.html">Контакты</a></li>
+                      </ul>
+                  </div>
+                  <div class="footer-column">
+                      <h3>Для пользователей</h3>
+                      <ul>
+                          <li><a href="faq.html">FAQ</a></li>
+                          <li><a href="terms.html">Условия обслуживания</a></li>
+                          <li><a href="privacy.html">Политика конфиденциальности</a></li>
+                          <li><a href="support.html">Поддержка</a></li>
+                      </ul>
+                  </div>
+                  <div class="footer-column">
+                      <h3>Для ресторанов</h3>
+                      <ul>
+                          <li><a href="partner.html">Стать партнером</a></li>
+                          <li><a href="restaurant-app.html">Приложение для ресторанов</a></li>
+                          <li><a href="restaurant-terms.html">Условия для ресторанов</a></li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="footer-newsletter">
+                  <h3>Подпишитесь на нашу рассылку</h3>
+                  <p>Получайте последние предложения и обновления</p>
+                  <form id="newsletterForm">
+                      <input type="email" placeholder="Ваш email" required>
+                      <button type="submit" class="btn btn-primary">Подписаться</button>
+                  </form>
+                  <div class="social-links">
+                      <a href="#"><i class="fab fa-facebook-f"></i></a>
+                      <a href="#"><i class="fab fa-twitter"></i></a>
+                      <a href="#"><i class="fab fa-instagram"></i></a>
+                      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                  </div>
+              </div>
+          </div>
+          <div class="footer-bottom">
+              <p>&copy; 2023 FoodExpress. Все права защищены.</p>
+          </div>
+      </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/translate.js"></script>
+  <script src="js/careers.js"></script>
+</body>
+</html>

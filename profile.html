@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой профиль | FoodExpress</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="light-theme">
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <h1>Food<span>Express</span></h1>
+                    </a>
+                </div>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="restaurants.html">Рестораны</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="contact.html">Контакты</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <button class="theme-toggle" id="themeToggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <div class="cart-icon">
+                        <a href="cart.html">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count" id="cartCount">0</span>
+                        </a>
+                    </div>
+                    <div class="user-actions">
+                        <a href="login.html" class="btn btn-outline" id="loginBtn">Войти</a>
+                        <a href="register.html" class="btn btn-primary" id="registerBtn">Регистрация</a>
+                        <div class="user-profile hidden" id="userProfile">
+                            <img src="img/default-avatar.png" alt="Профиль пользователя" id="userAvatar">
+                            <div class="dropdown-menu">
+                                <a href="profile.html">Мой профиль</a>
+                                <a href="orders.html">История заказов</a>
+                                <a href="#" id="logoutBtn">Выйти</a>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="restaurants.html">Рестораны</a></li>
+            <li><a href="about.html">О нас</a></li>
+            <li><a href="contact.html">Контакты</a></li>
+            <li><a href="login.html">Войти</a></li>
+            <li><a href="register.html">Регистрация</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <section class="profile-section">
+            <div class="container">
+                <h1 class="section-title">Мой профиль</h1>
+                
+                <div class="profile-content">
+                    <div class="profile-sidebar">
+                        <div class="profile-avatar-container">
+                            <div class="profile-avatar">
+                                <img src="img/default-avatar.png" alt="Аватар" id="profileAvatar">
+                                <div class="avatar-overlay">
+                                    <label for="avatarUpload" class="avatar-upload-btn">
+                                        <i class="fas fa-camera"></i>
+                                    </label>
+                                    <input type="file" id="avatarUpload" accept="image/*" hidden>
+                                </div>
+                            </div>
+                            <h2 id="profileName">Иван Иванов</h2>
+                            <p id="profileEmail">ivan.ivanov@example.com</p>
+                        </div>
+                        
+                        <div class="profile-menu">
+                            <button class="profile-menu-item active" data-tab="personal-info">
+                                <i class="fas fa-user"></i> Личные данные
+                            </button>
+                            <button class="profile-menu-item" data-tab="addresses">
+                                <i class="fas fa-map-marker-alt"></i> Адреса доставки
+                            </button>
+                            <button class="profile-menu-item" data-tab="payment-methods">
+                                <i class="fas fa-credit-card"></i> Способы оплаты
+                            </button>
+                            <button class="profile-menu-item" data-tab="order-history">
+                                <i class="fas fa-history"></i> История заказов
+                            </button>
+                            <button class="profile-menu-item" data-tab="favorites">
+                                <i class="fas fa-heart"></i> Избранные рестораны
+                            </button>
+                            <button class="profile-menu-item" data-tab="security">
+                                <i class="fas fa-lock"></i> Безопасность
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="profile-tabs">
+                        <!-- Личные данные -->
+                        <div class="profile-tab active" id="personal-info">
+                            <div class="tab-header">
+                                <h2>Личные данные</h2>
+                                <p>Управляйте вашей личной информацией</p>
+                            </div>
+                            
+                            <form id="personalInfoForm" class="profile-form">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="firstName">Имя</label>
+                                        <input type="text" id="firstName" placeholder="Введите ваше имя">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="lastName">Фамилия</label>
+                                        <input type="text" id="lastName" placeholder="Введите вашу фамилию">
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="phoneNumber">Номер телефона</label>
+                                    <input type="tel" id="phoneNumber" placeholder="Введите ваш номер телефона">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" placeholder="Введите ваш email" disabled>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="birthDate">Дата рождения</label>
+                                    <input type="date" id="birthDate">
+                                </div>
+                                
+                                <div class="form-actions">
+                                    <button type="submit" class="btn btn-primary">Сохранить изменения</button>
+                                </div>
+                            </form>
+                        </div>
+                        
+                        <!-- Адреса доставки -->
+                        <div class="profile-tab" id="addresses">
+                            <div class="tab-header">
+                                <h2>Адреса доставки</h2>
+                                <p>Управляйте вашими адресами доставки</p>
+                            </div>
+                            
+                            <div class="addresses-container">
+                                <div class="address-card">
+                                    <div class="address-header">
+                                        <h3>Дом</h3>
+                                        <span class="default-badge">По умолчанию</span>
+                                    </div>
+                                    <p>ул. Ленина, д. 123, кв. 45</p>
+                                    <p>Москва, 101000</p>
+                                    <div class="address-actions">
+                                        <button class="btn-icon edit-address" data-id="1">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button class="btn-icon delete-address" data-id="1">
+                                            <i class="fas fa-trash-alt"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <div class="address-card">
+                                    <div class="address-header">
+                                        <h3>Работа</h3>
+                                    </div>
+                                    <p>ул. Пушкина, д. 10, офис 15</p>
+                                    <p>Москва, 101001</p>
+                                    <div class="address-actions">
+                                        <button class="btn-icon edit-address" data-id="2">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button class="btn-icon delete-address" data-id="2">
+                                            <i class="fas fa-trash-alt"></i>
+                                        </button>
+                                        <button class="btn-icon set-default-address" data-id="2">
+                                            <i class="far fa-star"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <div class="add-address-card">
+                                    <button id="addAddressBtn">
+                                        <i class="fas fa-plus"></i>
+                                        <span>Добавить новый адрес</span>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <!-- Форма добавления/редактирования адреса -->
+                            <form id="addressForm" class="profile-form hidden">
+                                <div class="form-header">
+                                    <h3 id="addressFormTitle">Добавить новый адрес</h3>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="addressName">Название адреса</label>
+                                    <input type="text" id="addressName" placeholder="Например: Дом, Работа и т.д.">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="streetAddress">Улица и дом</label>
+                                    <input type="text" id="streetAddress" placeholder="Улица, дом, квартира и т.д.">
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="city">Город</label>
+                                        <input type="text" id="city" placeholder="Город">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="state">Область</label>
+                                        <input type="text" id="state" placeholder="Область">
+                                    </div>
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="zipCode">Индекс</label>
+                                        <input type="text" id="zipCode" placeholder="Индекс">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="country">Страна</label>
+                                        <input type="text" id="country" placeholder="Страна">
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <div class="checkbox-group">
+                                        <input type="checkbox" id="defaultAddress">
+                                        <label for="defaultAddress">Использовать как основной адрес</label>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-actions">
+                                    <button type="button" class="btn btn-outline" id="cancelAddressBtn">Отмена</button>
+                                    <button type="submit" class="btn btn-primary">Сохранить адрес</button>
+                                </div>
+                            </form>
+                        </div>
+                        
+                        <!-- Способы оплаты -->
+                        <div class="profile-tab" id="payment-methods">
+                            <div class="tab-header">
+                                <h2>Способы оплаты</h2>
+                                <p>Управляйте вашими платежными методами</p>
+                            </div>
+                            
+                            <div class="payment-methods-container">
+                                <div class="payment-card">
+                                    <div class="payment-card-icon">
+                                        <i class="fab fa-cc-visa"></i>
+                                    </div>
+                                    <div class="payment-card-details">
+                                        <h3>Visa оканчивается на 4242</h3>
+                                        <p>Действует до 12/2025</p>
+                                    </div>
+                                    <div class="payment-card-actions">
+                                        <button class="btn-icon delete-payment" data-id="1">
+                                            <i class="fas fa-trash-alt"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <div class="payment-card">
+                                    <div class="payment-card-icon">
+                                        <i class="fab fa-cc-mastercard"></i>
+                                    </div>
+                                    <div class="payment-card-details">
+                                        <h3>Mastercard оканчивается на 8888</h3>
+                                        <p>Действует до 08/2024</p>
+                                    </div>
+                                    <div class="payment-card-actions">
+                                        <button class="btn-icon delete-payment" data-id="2">
+                                            <i class="fas fa-trash-alt"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <div class="add-payment-card">
+                                    <button id="addPaymentBtn">
+                                        <i class="fas fa-plus"></i>
+                                        <span>Добавить способ оплаты</span>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <!-- Форма добавления платежного метода -->
+                            <form id="paymentForm" class="profile-form hidden">
+                                <div class="form-header">
+                                    <h3>Добавить способ оплаты</h3>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="cardNumber">Номер карты</label>
+                                    <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456">
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="expiryDate">Срок действия</label>
+                                        <input type="text" id="expiryDate" placeholder="ММ/ГГ">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cvv">CVV</label>
+                                        <input type="text" id="cvv" placeholder="123">
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="cardholderName">Имя владельца</label>
+                                    <input type="text" id="cardholderName" placeholder="Имя на карте">
+                                </div>
+                                
+                                <div class="form-actions">
+                                    <button type="button" class="btn btn-outline" id="cancelPaymentBtn">Отмена</button>
+                                    <button type="submit" class="btn btn-primary">Сохранить способ оплаты</button>
+                                </div>
+                            </form>
+                        </div>
+                        
+                        <!-- История заказов -->
+                        <div class="profile-tab" id="order-history">
+                            <div class="tab-header">
+                                <h2>История заказов</h2>
+                                <p>Просмотр ваших предыдущих заказов</p>
+                            </div>
+                            
+                            <div class="orders-container">
+                                <div class="order-card">
+                                    <div class="order-header">
+                                        <div class="order-info">
+                                            <h3>Заказ #12345</h3>
+                                            <p class="order-date">15 июня 2023 в 19:30</p>
+                                        </div>
+                                        <div class="order-status delivered">
+                                            <span>Доставлен</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="order-restaurant">
+                                        <img src="/placeholder.svg?height=50&width=50" alt="Burger Palace">
+                                        <div class="restaurant-info">
+                                            <h4>Burger Palace</h4>
+                                            <p>2 товара • 2498 ₽</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="order-items">
+                                        <p>1 × Классический чизбургер</p>
+                                        <p>1 × Картофель фри</p>
+                                    </div>
+                                    
+                                    <div class="order-actions">
+                                        <button class="btn btn-outline btn-sm">Подробности</button>
+                                        <button class="btn btn-primary btn-sm">Повторить заказ</button>
+                                    </div>
+                                </div>
+                                
+                                <div class="order-card">
+                                    <div class="order-header">
+                                        <div class="order-info">
+                                            <h3>Заказ #12344</h3>
+                                            <p class="order-date">10 июня 2023 в 13:15</p>
+                                        </div>
+                                        <div class="order-status delivered">
+                                            <span>Доставлен</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="order-restaurant">
+                                        <img src="/placeholder.svg?height=50&width=50" alt="Pizza Heaven">
+                                        <div class="restaurant-info">
+                                            <h4>Pizza Heaven</h4>
+                                            <p>3 товара • 3297 ₽</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="order-items">
+                                        <p>1 × Пицца Пепперони</p>
+                                        <p>1 × Чесночный хлеб</p>
+                                        <p>1 × Напиток</p>
+                                    </div>
+                                    
+                                    <div class="order-actions">
+                                        <button class="btn btn-outline btn-sm">Подробности</button>
+                                        <button class="btn btn-primary btn-sm">Повторить заказ</button>
+                                    </div>
+                                </div>
+                                
+                                <div class="order-card">
+                                    <div class="order-header">
+                                        <div class="order-info">
+                                            <h3>Заказ #12343</h3>
+                                            <p class="order-date">5 июня 2023 в 20:45</p>
+                                        </div>
+                                        <div class="order-status delivered">
+                                            <span>Доставлен</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="order-restaurant">
+                                        <img src="/placeholder.svg?height=50&width=50" alt="Sushi World">
+                                        <div class="restaurant-info">
+                                            <h4>Sushi World</h4>
+                                            <p>2 товара • 4298 ₽</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="order-items">
+                                        <p>1 × Сет Калифорния</p>
+                                        <p>1 × Мисо суп</p>
+                                    </div>
+                                    
+                                    <div class="order-actions">
+                                        <button class="btn btn-outline btn-sm">Подробности</button>
+                                        <button class="btn btn-primary btn-sm">Повторить заказ</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Избранные рестораны -->
+                        <div class="profile-tab" id="favorites">
+                            <div class="tab-header">
+                                <h2>Избранные рестораны</h2>
+                                <p>Ваши сохраненные рестораны</p>
+                            </div>
+                            
+                            <div class="favorites-container">
+                                <div class="favorite-card">
+                                    <div class="favorite-image">
+                                        <img src="/placeholder.svg?height=120&width=280" alt="Burger Palace">
+                                    </div>
+                                    <div class="favorite-info">
+                                        <div class="favorite-header">
+                                            <h3>Burger Palace</h3>
+                                            <div class="favorite-rating">
+                                                <i class="fas fa-star"></i>
+                                                <span>4.8</span>
+                                            </div>
+                                        </div>
+                                        <p class="favorite-categories">Фастфуд • Бургеры</p>
+                                        <div class="favorite-meta">
+                                            <span><i class="fas fa-clock"></i> 15-25 мин</span>
+                                            <span><i class="fas fa-truck"></i> 299 ₽</span>
+                                        </div>
+                                    </div>
+                                    <div class="favorite-actions">
+                                        <button class="btn-icon remove-favorite" data-id="1">
+                                            <i class="fas fa-heart"></i>
+                                        </button>
+                                        <a href="restaurant.html?id=1" class="btn btn-primary btn-sm">Заказать сейчас</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="favorite-card">
+                                    <div class="favorite-image">
+                                        <img src="/placeholder.svg?height=120&width=280" alt="Pizza Heaven">
+                                    </div>
+                                    <div class="favorite-info">
+                                        <div class="favorite-header">
+                                            <h3>Pizza Heaven</h3>
+                                            <div class="favorite-rating">
+                                                <i class="fas fa-star"></i>
+                                                <span>4.6</span>
+                                            </div>
+                                        </div>
+                                        <p class="favorite-categories">Пицца • Итальянская</p>
+                                        <div class="favorite-meta">
+                                            <span><i class="fas fa-clock"></i> 20-30 мин</span>
+                                            <span><i class="fas fa-truck"></i> 199 ₽</span>
+                                        </div>
+                                    </div>
+                                    <div class="favorite-actions">
+                                        <button class="btn-icon remove-favorite" data-id="2">
+                                            <i class="fas fa-heart"></i>
+                                        </button>
+                                        <a href="restaurant.html?id=2" class="btn btn-primary btn-sm">Заказать сейчас</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="favorite-card">
+                                    <div class="favorite-image">
+                                        <img src="/placeholder.svg?height=120&width=280" alt="Sushi World">
+                                    </div>
+                                    <div class="favorite-info">
+                                        <div class="favorite-header">
+                                            <h3>Sushi World</h3>
+                                            <div class="favorite-rating">
+                                                <i class="fas fa-star"></i>
+                                                <span>4.9</span>
+                                            </div>
+                                        </div>
+                                        <p class="favorite-categories">Суши • Японская</p>
+                                        <div class="favorite-meta">
+                                            <span><i class="fas fa-clock"></i> 25-35 мин</span>
+                                            <span><i class="fas fa-truck"></i> 399 ₽</span>
+                                        </div>
+                                    </div>
+                                    <div class="favorite-actions">
+                                        <button class="btn-icon remove-favorite" data-id="3">
+                                            <i class="fas fa-heart"></i>
+                                        </button>
+                                        <a href="restaurant.html?id=3" class="btn btn-primary btn-sm">Заказать сейчас</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Безопасность -->
+                        <div class="profile-tab" id="security">
+                            <div class="tab-header">
+                                <h2>Безопасность</h2>
+                                <p>Управление безопасностью аккаунта</p>
+                            </div>
+                            
+                            <form id="passwordForm" class="profile-form">
+                                <div class="form-header">
+                                    <h3>Изменить пароль</h3>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="currentPassword">Текущий пароль</label>
+                                    <div class="input-with-icon">
+                                        <input type="password" id="currentPassword" placeholder="Введите текущий пароль">
+                                        <button type="button" class="toggle-password">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="newPassword">Новый пароль</label>
+                                    <div class="input-with-icon">
+                                        <input type="password" id="newPassword" placeholder="Введите новый пароль">
+                                        <button type="button" class="toggle-password">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                    </div>
+                                    <div class="password-strength">
+                                        <div class="strength-meter">
+                                            <span></span>
+                                        </div>
+                                        <p class="strength-text">Сложность пароля: <span>Слабый</span></p>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="confirmNewPassword">Подтвердите новый пароль</label>
+                                    <div class="input-with-icon">
+                                        <input type="password" id="confirmNewPassword" placeholder="Подтвердите новый пароль">
+                                        <button type="button" class="toggle-password">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-actions">
+                                    <button type="submit" class="btn btn-primary">Обновить пароль</button>
+                                </div>
+                            </form>
+                            
+                            <div class="security-section">
+                                <div class="form-header">
+                                    <h3>Активные сессии</h3>
+                                </div>
+                                
+                                <div class="sessions-list">
+                                    <div class="session-item">
+                                        <div class="session-info">
+                                            <div class="session-device">
+                                                <i class="fas fa-laptop"></i>
+                                                <div>
+                                                    <h4>Windows PC - Chrome</h4>
+                                                    <p>Текущая сессия</p>
+                                                </div>
+                                            </div>
+                                            <div class="session-details">
+                                                <p>IP: 192.168.1.1</p>
+                                                <p>Последняя активность: Только что</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="session-item">
+                                        <div class="session-info">
+                                            <div class="session-device">
+                                                <i class="fas fa-mobile-alt"></i>
+                                                <div>
+                                                    <h4>iPhone - Safari</h4>
+                                                </div>
+                                            </div>
+                                            <div class="session-details">
+                                                <p>IP: 192.168.1.2</p>
+                                                <p>Последняя активность: 2 часа назад</p>
+                                            </div>
+                                        </div>
+                                        <button class="btn btn-outline btn-sm">Выйти</button>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-actions">
+                                    <button class="btn btn-outline">Выйти со всех устройств</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Food<span>Express</span></h2>
+                    <p>Вкусная еда, доставленная быстро</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Компания</h3>
+                        <ul>
+                            <li><a href="about.html">О нас</a></li>
+                            <li><a href="careers.html">Карьера</a></li>
+                            <li><a href="blog.html">Блог</a></li>
+                            <li><a href="contact.html">Контакты</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Для пользователей</h3>
+                        <ul>
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="terms.html">Условия обслуживания</a></li>
+                            <li><a href="privacy.html">Политика конфиденциальности</a></li>
+                            <li><a href="support.html">Поддержка</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Для ресторанов</h3>
+                        <ul>
+                            <li><a href="partner.html">Стать партнером</a></li>
+                            <li><a href="restaurant-app.html">Приложение для ресторанов</a></li>
+                            <li><a href="restaurant-terms.html">Условия для ресторанов</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>Подпишитесь на рассылку</h3>
+                    <p>Получайте последние предложения и обновления</p>
+                    <form id="newsletterForm">
+                        <input type="email" placeholder="Ваш email" required>
+                        <button type="submit" class="btn btn-primary">Подписаться</button>
+                    </form>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 FoodExpress. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/profile.js"></script>
+</body>
+</html>

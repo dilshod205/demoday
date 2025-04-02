@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Стать партнером | FoodExpress</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/partner.css">
+  <link rel="stylesheet" href="css/translate.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="light-theme">
+  <header>
+      <div class="container">
+          <div class="header-content">
+              <div class="logo">
+                  <a href="index.html">
+                      <h1>Food<span>Express</span></h1>
+                  </a>
+              </div>
+              <nav>
+                  <ul class="nav-links">
+                      <li><a href="restaurants.html">Рестораны</a></li>
+                      <li><a href="about.html">О нас</a></li>
+                      <li><a href="contact.html">Контакты</a></li>
+                  </ul>
+              </nav>
+              <div class="header-actions">
+                  <button class="theme-toggle" id="themeToggle">
+                      <i class="fas fa-moon"></i>
+                  </button>
+                  <div class="cart-icon">
+                      <a href="cart.html">
+                          <i class="fas fa-shopping-cart"></i>
+                          <span class="cart-count" id="cartCount">0</span>
+                      </a>
+                  </div>
+                  <div class="user-actions">
+                      <a href="login.html" class="btn btn-outline" id="loginBtn">Войти</a>
+                      <a href="register.html" class="btn btn-primary" id="registerBtn">Регистрация</a>
+                      <div class="user-profile hidden" id="userProfile">
+                          <img src="img/default-avatar.png" alt="Профиль пользователя" id="userAvatar">
+                          <div class="dropdown-menu">
+                              <a href="profile.html">Мой профиль</a>
+                              <a href="orders.html">История заказов</a>
+                              <a href="#" id="logoutBtn">Выйти</a>
+                          </div>
+                      </div>
+                  </div>
+                  <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                      <i class="fas fa-bars"></i>
+                  </button>
+              </div>
+          </div>
+      </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+      <ul>
+          <li><a href="restaurants.html">Рестораны</a></li>
+          <li><a href="about.html">О нас</a></li>
+          <li><a href="contact.html">Контакты</a></li>
+          <li><a href="login.html">Войти</a></li>
+          <li><a href="register.html">Регистрация</a></li>
+      </ul>
+  </div>
+
+  <main>
+      <!-- Герой-секция -->
+      <section class="partner-hero">
+          <div class="container">
+              <div class="partner-hero-content">
+                  <h1>Развивайте свой ресторанный бизнес с FoodExpress</h1>
+                  <p>Присоединяйтесь к тысячам успешных ресторанов, привлекающих новых клиентов каждый день</p>
+                  <a href="#partner-form" class="btn btn-primary">Стать партнером</a>
+              </div>
+          </div>
+      </section>
+      <!-- Преимущества -->
+      <section class="partner-benefits">
+        <div class="container">
+            <h2 class="section-title">Почему стоит стать нашим партнером?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Больше клиентов</h3>
+                    <p>Расширьте свою клиентскую базу и увеличьте доход, привлекая тысячи голодных клиентов в вашем районе.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Рост продаж</h3>
+                    <p>Наши партнеры в среднем увеличивают продажи на 25% в первые три месяца работы с нами.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>Надежная доставка</h3>
+                    <p>Сосредоточьтесь на том, что у вас получается лучше всего - готовьте отличную еду. Мы позаботимся о логистике с помощью нашей эффективной сети доставки.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Простая платформа</h3>
+                    <p>Управляйте заказами, обновляйте меню и отслеживайте показатели с помощью нашей удобной панели управления и мобильного приложения.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <h3>Маркетинговая поддержка</h3>
+                    <p>Участвуйте в наших акциях и пользуйтесь маркетинговыми кампаниями для привлечения большего числа клиентов.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Персональная поддержка</h3>
+                    <p>Наша команда поддержки партнеров доступна 7 дней в неделю, чтобы помочь вам добиться успеха на нашей платформе.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Как это работает -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">Как это работает</h2>
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Регистрация</h3>
+                        <p>Заполните нашу анкету партнера с информацией о вашем ресторане. Наша команда рассмотрит вашу заявку.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Подключение</h3>
+                        <p>После одобрения мы поможем вам настроить меню, цены и часы работы на нашей платформе.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Запуск</h3>
+                        <p>Ваш ресторан станет видимым для тысяч клиентов в вашем районе. Начните получать заказы сразу же.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Подготовка и выполнение</h3>
+                        <p>Получайте заказы через наш планшет или вашу существующую POS-систему. Готовьте еду, а наши курьеры заберут ее.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>Развитие бизнеса</h3>
+                        <p>Используйте нашу аналитику и инсайты для оптимизации меню, цен и операций, чтобы увеличить продажи.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Истории успеха -->
+    <section class="success-stories">
+        <div class="container">
+            <h2 class="section-title">Истории успеха наших партнеров</h2>
+            <div class="stories-slider" id="storiesSlider">
+                <div class="story-slide active">
+                    <div class="story-card">
+                        <div class="story-image">
+                            <img src="https://www.mypastapalace.com/cdn/shop/files/258381-leones.jpg?v=1724058611&width=3840" alt="Pasta Palace">
+                        </div>
+                        <div class="story-content">
+                            <h3>Pasta Palace</h3>
+                            <p class="story-location">Москва, Россия</p>
+                            <div class="story-stats">
+                                <div class="stat">
+                                    <span class="stat-value">35%</span>
+                                    <span class="stat-label">Рост выручки</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-value">40%</span>
+                                    <span class="stat-label">Новые клиенты</span>
+                                </div>
+                            </div>
+                            <p class="story-quote">"Сотрудничество с FoodExpress изменило наш бизнес. Мы привлекли клиентов, которых никогда бы не получили иначе, а дополнительный доход позволил нам расширить деятельность."</p>
+                            <p class="story-author">- Мария Иванова, Владелец</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="story-slide">
+                    <div class="story-card">
+                        <div class="story-image">
+                            <img src="https://s3-media0.fl.yelpcdn.com/bphoto/U6xKRRCXJA8EpjuywRN3ZQ/348s.jpg" alt="Burger Bliss">
+                        </div>
+                        <div class="story-content">
+                            <h3>Burger Bliss</h3>
+                            <p class="story-location">Санкт-Петербург, Россия</p>
+                            <div class="story-stats">
+                                <div class="stat">
+                                    <span class="stat-value">50%</span>
+                                    <span class="stat-label">Рост выручки</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-value">30%</span>
+                                    <span class="stat-label">Новые клиенты</span>
+                                </div>
+                            </div>
+                            <p class="story-quote">"Сначала мы сомневались, но подключение к FoodExpress стало одним из лучших бизнес-решений. Платформа проста в использовании, а служба поддержки всегда готова помочь."</p>
+                            <p class="story-author">- Иван Петров, Соучредитель</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="story-slide">
+                    <div class="story-card">
+                        <div class="story-image">
+                            <img src="https://img.freepik.com/free-photo/delicious-sushi-still-life_23-2151924464.jpg" alt="Sushi Sensation">
+                        </div>
+                        <div class="story-content">
+                            <h3>Sushi Sensation</h3>
+                            <p class="story-location">Казань, Россия</p>
+                            <div class="story-stats">
+                                <div class="stat">
+                                    <span class="stat-value">45%</span>
+                                    <span class="stat-label">Рост выручки</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-value">60%</span>
+                                    <span class="stat-label">Новые клиенты</span>
+                                </div>
+                            </div>
+                            <p class="story-quote">"Как ресторан высокой кухни, мы беспокоились о качестве доставки. FoodExpress превзошел наши ожидания своей надежной доставкой и отличным сервисом."</p>
+                            <p class="story-author">- Дмитрий Смирнов, Шеф-повар</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-controls">
+                <button class="prev-btn" id="prevStory"><i class="fas fa-chevron-left"></i></button>
+                <div class="slider-dots" id="storyDots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                <button class="next-btn" id="nextStory"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Тарифы -->
+    <section class="pricing-section">
+        <div class="container">
+            <h2 class="section-title">Прозрачные тарифы</h2>
+            <div class="pricing-info">
+                <p>Мы верим в честное партнерство, выгодное как ресторанам, так и клиентам. Наша структура комиссий прозрачна и устойчива.</p>
+            </div>
+            <div class="pricing-cards">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Стандартный тариф</h3>
+                        <div class="pricing-value">
+                            <span class="percentage">15%</span>
+                            <span class="description">Комиссия с заказа</span>
+                        </div>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Базовое размещение на FoodExpress</li>
+                            <li><i class="fas fa-check"></i> Доступ к сети доставки</li>
+                            <li><i class="fas fa-check"></i> Стандартная поддержка</li>
+                            <li><i class="fas fa-check"></i> Еженедельные выплаты</li>
+                            <li><i class="fas fa-check"></i> Базовая аналитика</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-action">
+                        <a href="#partner-form" class="btn btn-outline">Начать</a>
+                    </div>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">Самый популярный</div>
+                    <div class="pricing-header">
+                        <h3>Премиум тариф</h3>
+                        <div class="pricing-value">
+                            <span class="percentage">20%</span>
+                            <span class="description">Комиссия с заказа</span>
+                        </div>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Приоритетное размещение</li>
+                            <li><i class="fas fa-check"></i> Выше в результатах поиска</li>
+                            <li><i class="fas fa-check"></i> Участие в акциях</li>
+                            <li><i class="fas fa-check"></i> Персональный менеджер</li>
+                            <li><i class="fas fa-check"></i> Расширенная аналитика</li>
+                            <li><i class="fas fa-check"></i> Выплаты 2 раза в неделю</li>
+                            <li><i class="fas fa-check"></i> Маркетинговая поддержка</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-action">
+                        <a href="#partner-form" class="btn btn-primary">Начать</a>
+                    </div>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Корпоративный тариф</h3>
+                        <div class="pricing-value">
+                            <span class="description">Индивидуальные условия для крупных ресторанов</span>
+                        </div>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Все возможности Премиум</li>
+                            <li><i class="fas fa-check"></i> Интеграция с вашей POS-системой</li>
+                            <li><i class="fas fa-check"></i> Персональная поддержка</li>
+                            <li><i class="fas fa-check"></i> Индивидуальные маркетинговые кампании</li>
+                            <li><i class="fas fa-check"></i> Гибкие условия выплат</li>
+                            <li><i class="fas fa-check"></i> Скидки за объем</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-action">
+                        <a href="#partner-form" class="btn btn-outline">Связаться с отделом продаж</a>
+                    </div>
+                </div>
+            </div>
+            <div class="pricing-note">
+                <p>* Все тарифы включают доступ к панели управления и мобильному приложению без дополнительной платы.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="partner-faq">
+        <div class="container">
+            <h2 class="section-title">Часто задаваемые вопросы</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Сколько времени занимает подключение ресторана?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Процесс подключения обычно занимает 1-2 недели с момента подачи заявки до запуска. Это включает рассмотрение вашей заявки, настройку меню и обучение персонала работе с платформой.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Как я буду получать и обрабатывать заказы?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Вы можете получать заказы через наш планшет (который мы предоставляем), мобильное приложение для ресторанов или через интеграцию с вашей POS-системой. Вы будете получать уведомления о новых заказах в реальном времени и сможете легко принимать, отклонять или корректировать время приготовления.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Как и когда я буду получать оплату?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Мы осуществляем выплаты еженедельно для партнеров на Стандартном тарифе и два раза в неделю для Премиум тарифа. Общая сумма (за вычетом нашей комиссии) перечисляется напрямую на ваш банковский счет. Подробные отчеты о платежах доступны в вашей панели управления.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Могу ли я обновлять меню и цены?</h3>
+                          <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                      </div>
+                      <div class="faq-answer">
+                          <p>Да, вы полностью контролируете свое меню и цены. Вы можете вносить изменения в любое время через панель управления или мобильное приложение. Изменения обычно вступают в силу в течение нескольких минут.</p>
+                      </div>
+                  </div>
+                  <div class="faq-item">
+                      <div class="faq-question">
+                          <h3>Что делать, если мне нужно временно закрыть ресторан?</h3>
+                          <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                      </div>
+                      <div class="faq-answer">
+                          <p>Вы можете легко установить статус "временно закрыт" в панели управления на любой период. Это полезно для праздников, ремонта или непредвиденных ситуаций. Вы также можете корректировать часы работы по мере необходимости.</p>
+                      </div>
+                  </div>
+                  <div class="faq-item">
+                      <div class="faq-question">
+                          <h3>Есть ли контракт или минимальный срок сотрудничества?</h3>
+                          <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                      </div>
+                      <div class="faq-answer">
+                          <p>Мы предлагаем гибкие условия сотрудничества без долгосрочных контрактов. Вы можете подключиться к платформе по простому 30-дневному соглашению, которое автоматически продлевается. Вы можете покинуть платформу, уведомив нас за 30 дней, если она вам не подходит.</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+      <!-- Форма партнера -->
+      <section class="partner-form" id="partner-form">
+          <div class="container">
+              <h2 class="section-title">Станьте партнером сегодня</h2>
+              <div class="form-container">
+                  <form id="restaurantPartnerForm">
+                      <div class="form-section">
+                          <h3>Информация о ресторане</h3>
+                          <div class="form-row">
+                              <div class="form-group">
+                                  <label for="restaurantName">Название ресторана*</label>
+                                  <input type="text" id="restaurantName" name="restaurantName" required>
+                              </div>
+                              <div class="form-group">
+                                  <label for="restaurantType">Тип кухни*</label>
+                                  <select id="restaurantType" name="restaurantType" required>
+                                      <option value="">Выберите категорию</option>
+                                      <option value="russian">Русская</option>
+                                      <option value="european">Европейская</option>
+                                      <option value="asian">Азиатская</option>
+                                      <option value="japanese">Японская</option>
+                                      <option value="caucasian">Кавказская</option>
+                                      <option value="italian">Итальянская</option>
+                                      <option value="american">Американская</option>
+                                      <option value="fastfood">Фастфуд</option>
+                                      <option value="other">Другое</option>
+                                  </select>
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              <label for="restaurantAddress">Адрес ресторана*</label>
+                              <input type="text" id="restaurantAddress" name="restaurantAddress" required>
+                          </div>
+                          <div class="form-row">
+                            <div class="form-group">
+                                <label for="city">Город*</label>
+                                <input type="text" id="city" name="city" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="state">Область*</label>
+                                <input type="text" id="state" name="state" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="zipCode">Индекс*</label>
+                                <input type="text" id="zipCode" name="zipCode" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="restaurantPhone">Телефон ресторана*</label>
+                                <input type="tel" id="restaurantPhone" name="restaurantPhone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="restaurantEmail">Email ресторана*</label>
+                                <input type="email" id="restaurantEmail" name="restaurantEmail" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="restaurantWebsite">Сайт ресторана</label>
+                            <input type="url" id="restaurantWebsite" name="restaurantWebsite">
+                        </div>
+                    </div>
+                    
+                    <div class="form-section">
+                        <h3>Контактное лицо</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">Имя*</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Фамилия*</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="position">Должность*</label>
+                                <input type="text" id="position" name="position" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactPhone">Телефон*</label>
+                                <input type="tel" id="contactPhone" name="contactPhone" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactEmail">Email*</label>
+                            <input type="email" id="contactEmail" name="contactEmail" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-section">
+                        <h3>Информация о бизнесе</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="businessHours">Часы работы*</label>
+                                <input type="text" id="businessHours" name="businessHours" placeholder="Например: Пн-Пт: 9:00-22:00, Сб-Вс: 10:00-23:00" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="seatingCapacity">Вместимость зала</label>
+                                <input type="number" id="seatingCapacity" name="seatingCapacity">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="averageOrderValue">Средний чек (руб)</label>
+                            <input type="number" id="averageOrderValue" name="averageOrderValue">
+                        </div>
+                        <div class="form-group">
+                            <label for="currentDelivery">Предоставляете ли вы доставку?*</label>
+                            <div class="radio-group">
+                                <label>
+                                    <input type="radio" name="currentDelivery" value="yes" required> Да
+                                </label>
+                                <label>
+                                    <input type="radio" name="currentDelivery" value="no" required> Нет
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="otherPlatforms">Работаете ли вы с другими сервисами доставки?*</label>
+                            <div class="radio-group">
+                                <label>
+                                    <input type="radio" name="otherPlatforms" value="yes" required> Да
+                                </label>
+                                <label>
+                                    <input type="radio" name="otherPlatforms" value="no" required> Нет
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="preferredPlan">Предпочтительный тариф*</label>
+                            <select id="preferredPlan" name="preferredPlan" required>
+                                <option value="">Выберите тариф</option>
+                                <option value="standard">Стандартный (15% комиссия)</option>
+                                <option value="premium">Премиум (20% комиссия)</option>
+                                <option value="enterprise">Корпоративный (Индивидуальные условия)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="additionalInfo">Дополнительная информация</label>
+                            <textarea id="additionalInfo" name="additionalInfo" rows="4"></textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group terms-checkbox">
+                        <label>
+                            <input type="checkbox" name="termsAgree" required>
+                            Я согласен с <a href="restaurant-terms.html">Условиями сотрудничества</a> для партнеров-ресторанов
+                        </label>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Отправить заявку</button>
+                    </div>
+                </form>
+                <div id="formSuccess" class="form-success hidden">
+                    <div class="success-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>Заявка успешно отправлена!</h3>
+                    <p>Спасибо за интерес к сотрудничеству с FoodExpress. Наша команда рассмотрит вашу заявку и свяжется с вами в течение 2-3 рабочих дней.</p>
+                    <button id="submitAnotherBtn" class="btn btn-outline">Отправить новую заявку</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>Food<span>Express</span></h2>
+                <p>Вкусная еда, доставленная быстро</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>Компания</h3>
+                    <ul>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="careers.html">Карьера</a></li>
+                        <li><a href="blog.html">Блог</a></li>
+                        <li><a href="contact.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Для пользователей</h3>
+                    <ul>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="terms.html">Условия обслуживания</a></li>
+                        <li><a href="privacy.html">Политика конфиденциальности</a></li>
+                        <li><a href="support.html">Поддержка</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Для ресторанов</h3>
+                    <ul>
+                        <li><a href="partner.html">Стать партнером</a></li>
+                        <li><a href="restaurant-app.html">Приложение для ресторанов</a></li>
+                        <li><a href="restaurant-terms.html">Условия для ресторанов</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-newsletter">
+                <h3>Подпишитесь на рассылку</h3>
+                <p>Получайте последние предложения и обновления</p>
+                <form id="newsletterForm">
+                    <input type="email" placeholder="Ваш email" required>
+                    <button type="submit" class="btn btn-primary">Подписаться</button>
+                </form>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 FoodExpress. Все права защищены.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/translate.js"></script>
+<script src="js/partner.js"></script>
+</body>
+</html>

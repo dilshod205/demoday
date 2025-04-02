@@ -1,0 +1,143 @@
+<!DOCTYPE html><html lang="ru"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Ресторан | FoodExpress</title> <link rel="stylesheet" href="css/styles.css"> <link rel="stylesheet" href="css/restaurant.css"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> </head> <body class="light-theme"> <header> <div class="container"> <div class="header-content"> <div class="logo"> <a href="index.html"> <h1>Food<span>Express</span></h1> </a> </div> <nav> <ul class="nav-links"> <li><a href="restaurants.html">Рестораны</a></li> <li><a href="about.html">О нас</a></li> <li><a href="contact.html">Контакты</a></li> </ul> </nav> <div class="header-actions"> <button class="theme-toggle" id="themeToggle"> <i class="fas fa-moon"></i> </button> <div class="cart-icon"> <a href="cart.html"> <i class="fas fa-shopping-cart"></i> <span class="cart-count" id="cartCount">0</span> </a> </div> <div class="user-actions"> <a href="login.html" class="btn btn-outline" id="loginBtn">Войти</a> <a href="register.html" class="btn btn-primary" id="registerBtn">Регистрация</a> <div class="user-profile hidden" id="userProfile"> <img src="img/default-avatar.png" alt="Профиль пользователя" id="userAvatar"> <div class="dropdown-menu"> <a href="profile.html">Мой профиль</a> <a href="orders.html">История заказов</a> <a href="#" id="logoutBtn">Выйти</a> </div> </div> </div> <button class="mobile-menu-toggle" id="mobileMenuToggle"> <i class="fas fa-bars"></i> </button> </div> </div> </div> </header><div class="mobile-menu" id="mobileMenu">
+    <ul>
+        <li><a href="restaurants.html">Рестораны</a></li>
+        <li><a href="about.html">О нас</a></li>
+        <li><a href="contact.html">Контакты</a></li>
+        <li><a href="login.html">Войти</a></li>
+        <li><a href="register.html">Регистрация</a></li>
+    </ul>
+</div>
+
+<main>
+    <section class="restaurant-hero" id="restaurantHero">
+        <!-- Контент ресторана будет сгенерирован динамически -->
+    </section>
+
+    <section class="restaurant-content">
+        <div class="container">
+            <div class="restaurant-layout">
+                <div class="menu-container">
+                    <div class="menu-categories" id="menuCategories">
+                        <!-- Категории меню будут сгенерированы динамически -->
+                    </div>
+                    
+                    <div class="menu-items" id="menuItems">
+                        <!-- Позиции меню будут сгенерированы динамически -->
+                    </div>
+                </div>
+                
+                <div class="cart-container" id="cartContainer">
+                    <div class="cart-sticky">
+                        <h3>Ваш заказ</h3>
+                        <div class="cart-items" id="cartItems">
+                            <!-- Позиции в корзине будут сгенерированы динамически -->
+                            <div class="empty-cart">
+                                <i class="fas fa-shopping-cart"></i>
+                                <p>Ваша корзина пуста</p>
+                                <p class="empty-cart-message">Добавьте блюда из меню, чтобы начать заказ</p>
+                            </div>
+                        </div>
+                        
+                        <div class="cart-summary" id="cartSummary">
+                            <div class="cart-row">
+                                <span>Промежуточный итог</span>
+                                <span id="cartSubtotal">₽0.00</span>
+                            </div>
+                            <div class="cart-row">
+                                <span>Стоимость доставки</span>
+                                <span id="deliveryFee">₽2.99</span>
+                            </div>
+                            <div class="cart-row promo-code">
+                                <input type="text" placeholder="Промокод" id="promoCode">
+                                <button class="btn btn-outline btn-sm" id="applyPromo">Применить</button>
+                            </div>
+                            <div class="cart-row discount hidden" id="discountRow">
+                                <span>Скидка</span>
+                                <span id="discountAmount">-₽0.00</span>
+                            </div>
+                            <div class="cart-row total">
+                                <span>Итого</span>
+                                <span id="cartTotal">₽0.00</span>
+                            </div>
+                        </div>
+                        
+                        <button class="btn btn-primary btn-block" id="checkoutBtn" disabled>
+                            Оформить заказ
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>Food<span>Express</span></h2>
+                <p>Вкусная еда с быстрой доставкой</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>Компания</h3>
+                    <ul>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="careers.html">Карьера</a></li>
+                        <li><a href="blog.html">Блог</a></li>
+                        <li><a href="contact.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Пользователям</h3>
+                    <ul>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="terms.html">Условия обслуживания</a></li>
+                        <li><a href="privacy.html">Политика конфиденциальности</a></li>
+                        <li><a href="support.html">Поддержка</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Ресторанам</h3>
+                    <ul>
+                        <li><a href="partner.html">Стать партнёром</a></li>
+                        <li><a href="restaurant-app.html">Приложение для ресторанов</a></li>
+                        <li><a href="restaurant-terms.html">Условия для ресторанов</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-newsletter">
+                <h3>Подпишитесь на рассылку</h3>
+                <p>Получайте последние новости и предложения</p>
+                <form id="newsletterForm">
+                    <input type="email" placeholder="Ваш email" required>
+                    <button type="submit" class="btn btn-primary">Подписаться</button>
+                </form>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 FoodExpress. Все права защищены.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Модальное окно товара -->
+<div class="modal" id="itemModal">
+    <div class="modal-content">
+        <button class="modal-close" id="modalClose">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="modal-body" id="modalBody">
+            <!-- Контент модального окна будет сгенерирован динамически -->
+        </div>
+    </div>
+</div>
+
+<script src="js/main.js"></script>
+<script src="js/restaurant.js"></script>
