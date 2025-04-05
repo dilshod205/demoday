@@ -280,6 +280,10 @@
   margin-top: var(--spacing-xl);
 }
 
+.load-more button {
+  color: inherit;
+}
+
 /* Map Section */
 .map-section {
   padding: var(--spacing-xl) 0;
@@ -393,6 +397,45 @@
   max-height: 500px;
 }
 
+/* Dark Mode Styles */
+@media (prefers-color-scheme: dark) {
+  /* Search button */
+  .search-container button {
+    color: white;
+  }
+
+  /* Slider buttons */
+  .prev-btn,
+  .next-btn {
+    color: white;
+  }
+
+  /* Category buttons */
+  .category-btn {
+    color: white;
+  }
+
+  /* Load more button */
+  .load-more button {
+    color: white;
+  }
+
+  /* App download buttons */
+  .app-btn {
+    color: white;
+  }
+}
+
+/* Alternative Dark Mode (if using class) */
+.dark-mode .search-container button,
+.dark-mode .prev-btn,
+.dark-mode .next-btn,
+.dark-mode .category-btn,
+.dark-mode .load-more button,
+.dark-mode .app-btn {
+  color: white;
+}
+
 /* Responsive Styles */
 @media (max-width: 1024px) {
   .steps {
@@ -443,4 +486,3 @@
     flex-direction: column;
   }
 }
-

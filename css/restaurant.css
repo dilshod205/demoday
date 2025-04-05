@@ -586,6 +586,66 @@
   flex: 1;
 }
 
+/* Dark Mode Styles for Restaurant Page */
+@media (prefers-color-scheme: dark) {
+  /* Menu category buttons */
+  .category-btn {
+    color: white;
+  }
+
+  /* Add to cart buttons */
+  .add-to-cart-btn {
+    color: white;
+  }
+
+  /* Quantity buttons in cart */
+  .quantity-btn {
+    color: white;
+  }
+
+  /* Quantity buttons in modal */
+  .quantity-btn-modal {
+    color: white;
+  }
+
+  /* Promo code and checkout buttons */
+  .btn-sm {
+    color: white;
+  }
+
+  /* Modal action buttons */
+  .modal-actions .btn {
+    color: white;
+  }
+
+  /* Remove item button in cart */
+  .remove-item {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .remove-item:hover {
+    color: var(--error-color);
+  }
+}
+
+/* Alternative Dark Mode (if using class) */
+.dark-mode .category-btn,
+.dark-mode .add-to-cart-btn,
+.dark-mode .quantity-btn,
+.dark-mode .quantity-btn-modal,
+.dark-mode .btn-sm,
+.dark-mode .modal-actions .btn {
+  color: white;
+}
+
+.dark-mode .remove-item {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.dark-mode .remove-item:hover {
+  color: var(--error-color);
+}
+
 /* Responsive Styles */
 @media (max-width: 1024px) {
   .restaurant-layout {
@@ -636,4 +696,3 @@
     flex-direction: column;
   }
 }
-

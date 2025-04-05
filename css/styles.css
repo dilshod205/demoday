@@ -1,3 +1,4 @@
+
 /* Base Styles and Variables */
 :root {
   /* Light Theme Colors */
@@ -5,7 +6,7 @@
   --primary-dark: #e5484d;
   --primary-light: #ff8a8f;
   --secondary-color: #00a699;
-  --text-color: #333333;
+  --text-color: #333333; /* Черный текст для светлой темы */
   --text-light: #666666;
   --background-color: #ffffff;
   --background-alt: #f8f9fa;
@@ -54,7 +55,7 @@
   --primary-dark: #e5484d;
   --primary-light: #ff8a8f;
   --secondary-color: #00a699;
-  --text-color: #f0f0f0;
+  --text-color: #f0f0f0; /* Белый текст для тёмной темы */
   --text-light: #b0b0b0;
   --background-color: #121212;
   --background-alt: #1e1e1e;
@@ -76,7 +77,7 @@ html {
 
 body {
   font-family: var(--font-family);
-  color: var(--text-color);
+  color: var(--text-color); /* Здесь подключаем переменную текста */
   background-color: var(--background-color);
   line-height: 1.6;
   transition: background-color var(--transition-normal), color var(--transition-normal);
@@ -197,9 +198,7 @@ p {
 .btn-outline:hover {
   background-color: var(--primary-color);
   color: white;
-}
-
-/* Forms */
+}/* Forms */
 input,
 select,
 textarea {
@@ -421,9 +420,7 @@ header {
   color: var(--text-color);
   font-weight: 500;
   border-bottom: 1px solid var(--border-color);
-}
-
-/* Footer */
+}/* Footer */
 footer {
   background-color: var(--background-alt);
   padding: var(--spacing-xxl) 0 var(--spacing-lg);
@@ -626,4 +623,3 @@ footer {
     font-size: var(--font-size-small);
   }
 }
-
