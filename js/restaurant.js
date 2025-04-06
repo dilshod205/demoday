@@ -890,25 +890,9 @@ function setupEventListeners() {
 
   if (checkoutBtn) {
     checkoutBtn.addEventListener("click", () => {
-        // Создаем и настраиваем аудио элемент
-        const audio = new Audio();
-        audio.src = "https://www.myinstants.com/en/instant/uzbeki-kushaiut-33060/?utm_source=copy&utm_medium=share"; // Пример ссылки на аудио
-        audio.preload = "auto";
-        
-        // Обработка ошибок воспроизведения
-        audio.addEventListener("error", () => {
-            console.error("Ошибка воспроизведения аудио");
-        });
-        
-        // Попытка воспроизведения
-        audio.play().catch(error => {
-            console.log("Автовоспроизведение заблокировано:", error);
-        });
-
-        // Добавляем визуальную анимацию кнопки (опционально)
-        checkoutBtn.classList.add("processing");
-        setTimeout(() => checkoutBtn.classList.remove("processing"), 500);
-    });
+      alert("В реальном приложении здесь был бы переход к оформлению заказа")
+    })
+  }
 }
 
 // Инициализация при загрузке DOM
