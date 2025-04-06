@@ -1,4 +1,4 @@
-// DOM Elements
+// Элементы DOM
 const restaurantHero = document.getElementById("restaurantHero")
 const menuCategories = document.getElementById("menuCategories")
 const menuItems = document.getElementById("menuItems")
@@ -15,38 +15,38 @@ const itemModal = document.getElementById("itemModal")
 const modalClose = document.getElementById("modalClose")
 const modalBody = document.getElementById("modalBody")
 
-// Sample Data
+// Пример данных
 const restaurant = {
   id: 1,
   name: "Burger Palace",
   image: "/placeholder.svg?height=300&width=1200",
   rating: 4.8,
   reviewCount: 243,
-  categories: ["Fast Food", "Burgers", "American"],
+  categories: ["Фастфуд", "Бургеры", "Американская"],
   priceRange: "$$",
-  deliveryTime: "15-25 min",
+  deliveryTime: "15-25 мин",
   deliveryFee: "$2.99",
   minOrder: "$10",
   address: "123 Main St, New York, NY 10001",
   phone: "(555) 123-4567",
   hours: "10:00 AM - 10:00 PM",
   description:
-    "Serving the juiciest burgers in town since 2010. Our patties are made from 100% grass-fed beef and served on freshly baked buns.",
+    "Готовим самые сочные бургеры в городе с 2010 года. Наши котлеты из 100% органической говядины и подаются на свежеиспеченных булочках.",
 }
 
 const menuData = [
   {
     id: "burgers",
-    name: "Burgers",
+    name: "Бургеры",
     items: [
       {
         id: 1,
-        name: "Classic Cheeseburger",
+        name: "Классический чизбургер",
         description:
-          "Beef patty, cheddar cheese, lettuce, tomato, onion, pickles, and our special sauce on a brioche bun.",
+          "Говяжья котлета, сыр чеддер, салат, помидор, лук, соленые огурцы и фирменный соус на бриошь-булочке.",
         price: 8.99,
         image: "https://res.cloudinary.com/grubhub-dev/image/upload/w_960,f_auto/whitelabel/w_burger_cuisine",
-        tags: ["Popular", "Bestseller"],
+        tags: ["Популярный", "Хит продаж"],
         nutrition: {
           calories: 650,
           protein: 35,
@@ -55,26 +55,26 @@ const menuData = [
         },
         options: [
           {
-            name: "Extra Cheese",
+            name: "Дополнительный сыр",
             price: 1.5,
           },
           {
-            name: "Bacon",
+            name: "Бекон",
             price: 2.0,
           },
           {
-            name: "Avocado",
+            name: "Авокадо",
             price: 1.5,
           },
         ],
       },
       {
         id: 2,
-        name: "Double Bacon Burger",
-        description: "Two beef patties, crispy bacon, cheddar cheese, lettuce, tomato, and mayo on a brioche bun.",
+        name: "Двойной бекон бургер",
+        description: "Две говяжьи котлеты, хрустящий бекон, сыр чеддер, салат, помидор и майонез на бриошь-булочке.",
         price: 12.99,
         image: "https://recipeno.sfo2.cdn.digitaloceanspaces.com/photos/content/678/keto_bacon_double_cheeseburger.jpg",
-        tags: ["Spicy"],
+        tags: ["Острый"],
         nutrition: {
           calories: 950,
           protein: 55,
@@ -83,22 +83,22 @@ const menuData = [
         },
         options: [
           {
-            name: "Extra Cheese",
+            name: "Дополнительный сыр",
             price: 1.5,
           },
           {
-            name: "Extra Bacon",
+            name: "Дополнительный бекон",
             price: 2.0,
           },
         ],
       },
       {
         id: 3,
-        name: "Veggie Burger",
-        description: "Plant-based patty, lettuce, tomato, onion, pickles, and vegan mayo on a whole wheat bun.",
+        name: "Вегетарианский бургер",
+        description: "Растительная котлета, салат, помидор, лук, соленые огурцы и веганский майонез на цельнозерновой булочке.",
         price: 9.99,
         image: "https://www.realsimple.com/thmb/z3cQCYXTyDQS9ddsqqlTVE8fnpc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/real-simple-mushroom-black-bean-burgers-recipe-0c365277d4294e6db2daa3353d6ff605.jpg",
-        tags: ["Vegetarian"],
+        tags: ["Вегетарианский"],
         nutrition: {
           calories: 450,
           protein: 15,
@@ -107,11 +107,11 @@ const menuData = [
         },
         options: [
           {
-            name: "Vegan Cheese",
+            name: "Веганский сыр",
             price: 1.5,
           },
           {
-            name: "Avocado",
+            name: "Авокадо",
             price: 1.5,
           },
         ],
@@ -120,15 +120,15 @@ const menuData = [
   },
   {
     id: "sides",
-    name: "Sides",
+    name: "Гарниры",
     items: [
       {
         id: 4,
-        name: "French Fries",
-        description: "Crispy golden fries seasoned with our special blend of spices.",
+        name: "Картофель фри",
+        description: "Хрустящая золотистая картошка с фирменной смесью специй.",
         price: 3.99,
         image: "https://kirbiecravings.com/wp-content/uploads/2019/09/easy-french-fries-1.jpg",
-        tags: ["Popular"],
+        tags: ["Популярный"],
         nutrition: {
           calories: 380,
           protein: 4,
@@ -137,19 +137,19 @@ const menuData = [
         },
         options: [
           {
-            name: "Cheese Sauce",
+            name: "Сырный соус",
             price: 1.0,
           },
           {
-            name: "Truffle Oil",
+            name: "Трюфельное масло",
             price: 2.0,
           },
         ],
       },
       {
         id: 5,
-        name: "Onion Rings",
-        description: "Thick-cut onion rings in a crispy beer batter.",
+        name: "Луковые кольца",
+        description: "Толстые луковые кольца в хрустящем кляре.",
         price: 4.99,
         image: "https://static01.nyt.com/images/2020/04/22/dining/ejm-sourdough-03/ejm-sourdough-03-threeByTwoMediumAt2X.jpg",
         tags: [],
@@ -161,7 +161,7 @@ const menuData = [
         },
         options: [
           {
-            name: "Dipping Sauce",
+            name: "Соус для макания",
             price: 0.5,
           },
         ],
@@ -170,12 +170,12 @@ const menuData = [
   },
   {
     id: "drinks",
-    name: "Drinks",
+    name: "Напитки",
     items: [
       {
         id: 6,
-        name: "Soft Drink",
-        description: "Your choice of Coca-Cola, Diet Coke, Sprite, or Fanta.",
+        name: "Газировка",
+        description: "На выбор: Coca-Cola, Diet Coke, Sprite или Fanta.",
         price: 2.49,
         image: "https://d2td6mzj4f4e1e.cloudfront.net/wp-content/uploads/sites/9/2019/04/soft-drinks.jpg",
         tags: [],
@@ -187,18 +187,18 @@ const menuData = [
         },
         options: [
           {
-            name: "Large Size",
+            name: "Большой размер",
             price: 1.0,
           },
         ],
       },
       {
         id: 7,
-        name: "Milkshake",
-        description: "Creamy milkshake made with premium ice cream. Available in chocolate, vanilla, or strawberry.",
+        name: "Милкшейк",
+        description: "Сливочный милкшейк из премиального мороженого. Доступные вкусы: шоколад, ваниль, клубника.",
         price: 5.99,
         image: "https://www.layersofhappiness.com/wp-content/uploads/2016/03/black-tap-milkshake-15.jpg",
-        tags: ["Popular"],
+        tags: ["Популярный"],
         nutrition: {
           calories: 550,
           protein: 10,
@@ -207,11 +207,11 @@ const menuData = [
         },
         options: [
           {
-            name: "Whipped Cream",
+            name: "Взбитые сливки",
             price: 0.5,
           },
           {
-            name: "Cherry on Top",
+            name: "Вишенка сверху",
             price: 0.25,
           },
         ],
@@ -220,15 +220,15 @@ const menuData = [
   },
   {
     id: "desserts",
-    name: "Desserts",
+    name: "Десерты",
     items: [
       {
         id: 8,
-        name: "Chocolate Brownie",
-        description: "Warm chocolate brownie served with vanilla ice cream and chocolate sauce.",
+        name: "Шоколадный брауни",
+        description: "Теплый шоколадный брауни с ванильным мороженым и шоколадным соусом.",
         price: 6.99,
         image: "https://i0.wp.com/cookingwithbry.com/wp-content/uploads/chocolate-brownies-recipe.png?fit=1080%2C1080&ssl=1",
-        tags: ["Bestseller"],
+        tags: ["Хит продаж"],
         nutrition: {
           calories: 650,
           protein: 8,
@@ -237,7 +237,7 @@ const menuData = [
         },
         options: [
           {
-            name: "Extra Ice Cream",
+            name: "Дополнительное мороженое",
             price: 1.5,
           },
         ],
@@ -246,7 +246,7 @@ const menuData = [
   },
 ]
 
-// Cart State
+// Состояние корзины
 let cart = {
   items: [],
   subtotal: 0,
@@ -256,27 +256,27 @@ let cart = {
   promoApplied: false,
 }
 
-// Initialize Restaurant Page
+// Инициализация страницы ресторана
 function initRestaurantPage() {
-  // Get restaurant ID from URL
+  // Получение ID ресторана из URL
   const urlParams = new URLSearchParams(window.location.search)
   const restaurantId = urlParams.get("id")
 
-  // In a real app, we would fetch the restaurant data based on the ID
-  // For demo purposes, we'll use the sample data
+  // В реальном приложении здесь был бы запрос данных по ID
+  // Для демо используем пример данных
 
   renderRestaurantHero()
   renderMenuCategories()
   renderMenuItems()
 
-  // Initialize cart from localStorage
+  // Загрузка корзины из localStorage
   loadCart()
 
-  // Set up event listeners
+  // Настройка обработчиков событий
   setupEventListeners()
 }
 
-// Render Restaurant Hero
+// Отображение героя ресторана
 function renderRestaurantHero() {
   if (!restaurantHero) return
 
@@ -291,7 +291,7 @@ function renderRestaurantHero() {
                 <div class="restaurant-meta-item restaurant-rating">
                     <i class="fas fa-star"></i>
                     <span>${restaurant.rating}</span>
-                    <span>(${restaurant.reviewCount} reviews)</span>
+                    <span>(${restaurant.reviewCount} отзывов)</span>
                 </div>
                 <div class="restaurant-meta-item">
                     <i class="fas fa-utensils"></i>
@@ -307,7 +307,7 @@ function renderRestaurantHero() {
                 </div>
                 <div class="restaurant-meta-item">
                     <i class="fas fa-truck"></i>
-                    <span>Delivery: ${restaurant.deliveryFee}</span>
+                    <span>Доставка: ${restaurant.deliveryFee}</span>
                 </div>
             </div>
             <p>${restaurant.description}</p>
@@ -317,23 +317,23 @@ function renderRestaurantHero() {
   restaurantHero.appendChild(heroContent)
 }
 
-// Render Menu Categories
+// Отображение категорий меню
 function renderMenuCategories() {
   if (!menuCategories) return
 
   menuCategories.innerHTML = ""
 
-  // Add "All" category
+  // Кнопка "Все"
   const allCategoryBtn = document.createElement("button")
   allCategoryBtn.className = "category-btn active"
   allCategoryBtn.dataset.category = "all"
-  allCategoryBtn.textContent = "All"
+  allCategoryBtn.textContent = "Все"
   allCategoryBtn.addEventListener("click", () => {
     setActiveCategory("all")
   })
   menuCategories.appendChild(allCategoryBtn)
 
-  // Add other categories
+  // Остальные категории
   menuData.forEach((category) => {
     const categoryBtn = document.createElement("button")
     categoryBtn.className = "category-btn"
@@ -346,7 +346,7 @@ function renderMenuCategories() {
   })
 }
 
-// Set Active Category
+// Установка активной категории
 function setActiveCategory(categoryId) {
   const categoryBtns = document.querySelectorAll(".category-btn")
   categoryBtns.forEach((btn) => {
@@ -357,19 +357,19 @@ function setActiveCategory(categoryId) {
     }
   })
 
-  // Scroll to category section
+  // Скролл к выбранной категории
   if (categoryId !== "all") {
     const categorySection = document.getElementById(`category-${categoryId}`)
     if (categorySection) {
       categorySection.scrollIntoView({ behavior: "smooth" })
     }
   } else {
-    // Scroll to top of menu items
+    // Скролл к началу меню
     menuItems.scrollIntoView({ behavior: "smooth" })
   }
 }
 
-// Render Menu Items
+// Отображение элементов меню
 function renderMenuItems() {
   if (!menuItems) return
 
@@ -415,9 +415,8 @@ function renderMenuItems() {
                 </div>
             `
 
-      // Add click event to open modal
+      // Обработчик клика для открытия модального окна
       menuItem.addEventListener("click", (e) => {
-        // Don't open modal if add to cart button was clicked
         if (!e.target.closest(".add-to-cart-btn")) {
           openItemModal(item)
         }
@@ -427,18 +426,18 @@ function renderMenuItems() {
     })
   })
 
-  // Add click event to add to cart buttons
+  // Обработчики для кнопок добавления в корзину
   const addToCartBtns = document.querySelectorAll(".add-to-cart-btn")
   addToCartBtns.forEach((btn) => {
     btn.addEventListener("click", (e) => {
-      e.stopPropagation() // Prevent modal from opening
+      e.stopPropagation()
       const itemId = Number.parseInt(btn.dataset.itemId)
       addToCart(findItemById(itemId), 1)
     })
   })
 }
 
-// Find Item by ID
+// Поиск элемента по ID
 function findItemById(itemId) {
   for (const category of menuData) {
     const item = category.items.find((item) => item.id === itemId)
@@ -447,7 +446,7 @@ function findItemById(itemId) {
   return null
 }
 
-// Open Item Modal
+// Открытие модального окна товара
 function openItemModal(item) {
   if (!itemModal || !modalBody) return
 
@@ -461,23 +460,23 @@ function openItemModal(item) {
             <p class="modal-item-description">${item.description}</p>
             
             <div class="modal-item-nutrition">
-                <h3 class="nutrition-title">Nutrition Information</h3>
+                <h3 class="nutrition-title">Пищевая ценность</h3>
                 <div class="nutrition-info">
                     <div class="nutrition-item">
                         <span class="nutrition-value">${item.nutrition.calories}</span>
-                        <span class="nutrition-label">Calories</span>
+                        <span class="nutrition-label">Калории</span>
                     </div>
                     <div class="nutrition-item">
                         <span class="nutrition-value">${item.nutrition.protein}g</span>
-                        <span class="nutrition-label">Protein</span>
+                        <span class="nutrition-label">Белки</span>
                     </div>
                     <div class="nutrition-item">
                         <span class="nutrition-value">${item.nutrition.carbs}g</span>
-                        <span class="nutrition-label">Carbs</span>
+                        <span class="nutrition-label">Углеводы</span>
                     </div>
                     <div class="nutrition-item">
                         <span class="nutrition-value">${item.nutrition.fat}g</span>
-                        <span class="nutrition-label">Fat</span>
+                        <span class="nutrition-label">Жиры</span>
                     </div>
                 </div>
             </div>
@@ -486,7 +485,7 @@ function openItemModal(item) {
               item.options.length > 0
                 ? `
                 <div class="modal-item-options">
-                    <h3 class="options-title">Add Options</h3>
+                    <h3 class="options-title">Дополнительные опции</h3>
                     <div class="options-list">
                         ${item.options
                           .map(
@@ -506,7 +505,7 @@ function openItemModal(item) {
             }
             
             <div class="modal-item-quantity">
-                <span class="quantity-label">Quantity:</span>
+                <span class="quantity-label">Количество:</span>
                 <div class="quantity-controls">
                     <button class="quantity-btn-modal" id="decreaseQuantity">
                         <i class="fas fa-minus"></i>
@@ -519,22 +518,20 @@ function openItemModal(item) {
             </div>
             
             <div class="modal-item-total">
-                <span>Total:</span>
+                <span>Итого:</span>
                 <span id="modalItemTotal">$${item.price.toFixed(2)}</span>
             </div>
             
             <div class="modal-actions">
-                <button class="btn btn-outline" id="cancelModal">Cancel</button>
-                <button class="btn btn-primary" id="addToCartModal">Add to Cart</button>
+                <button class="btn btn-outline" id="cancelModal">Отмена</button>
+                <button class="btn btn-primary" id="addToCartModal">В корзину</button>
             </div>
         </div>
     `
 
-  // Show modal
   itemModal.classList.add("active")
   document.body.style.overflow = "hidden"
 
-  // Set up event listeners for modal
   const decreaseQuantityBtn = document.getElementById("decreaseQuantity")
   const increaseQuantityBtn = document.getElementById("increaseQuantity")
   const quantityValue = document.getElementById("quantityValue")
@@ -547,11 +544,9 @@ function openItemModal(item) {
   let totalPrice = item.price
   let selectedOptions = []
 
-  // Update total price
   function updateTotalPrice() {
     totalPrice = item.price * quantity
 
-    // Add selected options price
     selectedOptions.forEach((option) => {
       totalPrice += option.price * quantity
     })
@@ -559,7 +554,6 @@ function openItemModal(item) {
     modalItemTotal.textContent = `$${totalPrice.toFixed(2)}`
   }
 
-  // Decrease quantity
   if (decreaseQuantityBtn) {
     decreaseQuantityBtn.addEventListener("click", () => {
       if (quantity > 1) {
@@ -570,7 +564,6 @@ function openItemModal(item) {
     })
   }
 
-  // Increase quantity
   if (increaseQuantityBtn) {
     increaseQuantityBtn.addEventListener("click", () => {
       quantity++
@@ -579,7 +572,6 @@ function openItemModal(item) {
     })
   }
 
-  // Option checkboxes
   optionCheckboxes.forEach((checkbox, index) => {
     checkbox.addEventListener("change", () => {
       const optionPrice = Number.parseFloat(checkbox.dataset.price)
@@ -598,15 +590,12 @@ function openItemModal(item) {
     })
   })
 
-  // Cancel button
   if (cancelModalBtn) {
     cancelModalBtn.addEventListener("click", closeItemModal)
   }
 
-  // Add to cart button
   if (addToCartModalBtn) {
     addToCartModalBtn.addEventListener("click", () => {
-      // Create a copy of the item with selected options
       const itemToAdd = {
         ...item,
         selectedOptions: [...selectedOptions],
@@ -618,7 +607,7 @@ function openItemModal(item) {
   }
 }
 
-// Close Item Modal
+// Закрытие модального окна
 function closeItemModal() {
   if (!itemModal) return
 
@@ -626,11 +615,10 @@ function closeItemModal() {
   document.body.style.overflow = ""
 }
 
-// Add to Cart
+// Добавление в корзину
 function addToCart(item, quantity) {
   if (!item) return
 
-  // Check if item is already in cart
   const existingItemIndex = cart.items.findIndex(
     (cartItem) =>
       cartItem.id === item.id &&
@@ -638,10 +626,8 @@ function addToCart(item, quantity) {
   )
 
   if (existingItemIndex !== -1) {
-    // Update quantity if item already exists
     cart.items[existingItemIndex].quantity += quantity
   } else {
-    // Add new item to cart
     cart.items.push({
       id: item.id,
       name: item.name,
@@ -651,20 +637,15 @@ function addToCart(item, quantity) {
     })
   }
 
-  // Update cart
   updateCart()
-
-  // Show success message
-  showToast(`${quantity} x ${item.name} added to cart`)
+  showToast(`${quantity} x ${item.name} добавлено в корзину`)
 }
 
-// Update Cart
+// Обновление корзины
 function updateCart() {
-  // Calculate subtotal
   cart.subtotal = cart.items.reduce((total, item) => {
     let itemTotal = item.price * item.quantity
 
-    // Add selected options price
     if (item.selectedOptions) {
       item.selectedOptions.forEach((option) => {
         itemTotal += option.price * item.quantity
@@ -674,32 +655,26 @@ function updateCart() {
     return total + itemTotal
   }, 0)
 
-  // Calculate total
   cart.total = cart.subtotal + cart.deliveryFee - cart.discount
 
-  // Update UI
   renderCartItems()
   updateCartSummary()
-
-  // Save cart to localStorage
   saveCart()
 }
 
-// Render Cart Items
+// Отображение элементов корзины
 function renderCartItems() {
   if (!cartItems) return
 
   if (cart.items.length === 0) {
-    // Show empty cart message
     cartItems.innerHTML = `
             <div class="empty-cart">
                 <i class="fas fa-shopping-cart"></i>
-                <p>Your cart is empty</p>
-                <p class="empty-cart-message">Add items from the menu to start your order</p>
+                <p>Ваша корзина пуста</p>
+                <p class="empty-cart-message">Добавьте товары из меню чтобы начать заказ</p>
             </div>
         `
 
-    // Disable checkout button
     if (checkoutBtn) {
       checkoutBtn.disabled = true
     }
@@ -707,23 +682,19 @@ function renderCartItems() {
     return
   }
 
-  // Enable checkout button
   if (checkoutBtn) {
     checkoutBtn.disabled = false
   }
 
-  // Render cart items
   cartItems.innerHTML = ""
 
   cart.items.forEach((item, index) => {
     const cartItem = document.createElement("div")
     cartItem.className = "cart-item"
 
-    // Calculate item total
     let itemTotal = item.price * item.quantity
     let optionsText = ""
 
-    // Add selected options
     if (item.selectedOptions && item.selectedOptions.length > 0) {
       item.selectedOptions.forEach((option) => {
         itemTotal += option.price * item.quantity
@@ -756,7 +727,6 @@ function renderCartItems() {
     cartItems.appendChild(cartItem)
   })
 
-  // Add event listeners to cart item buttons
   const decreaseBtns = document.querySelectorAll(".decrease-btn")
   const increaseBtns = document.querySelectorAll(".increase-btn")
   const removeItemBtns = document.querySelectorAll(".remove-item")
@@ -783,7 +753,7 @@ function renderCartItems() {
   })
 }
 
-// Update Cart Summary
+// Обновление сводки корзины
 function updateCartSummary() {
   if (!cartSubtotal || !deliveryFee || !cartTotal) return
 
@@ -791,7 +761,6 @@ function updateCartSummary() {
   deliveryFee.textContent = `$${cart.deliveryFee.toFixed(2)}`
   cartTotal.textContent = `$${cart.total.toFixed(2)}`
 
-  // Show/hide discount row
   if (cart.discount > 0) {
     discountRow.classList.remove("hidden")
     discountAmount.textContent = `-$${cart.discount.toFixed(2)}`
@@ -800,7 +769,7 @@ function updateCartSummary() {
   }
 }
 
-// Decrease Item Quantity
+// Уменьшение количества товара
 function decreaseItemQuantity(index) {
   if (cart.items[index].quantity > 1) {
     cart.items[index].quantity--
@@ -810,51 +779,45 @@ function decreaseItemQuantity(index) {
   }
 }
 
-// Increase Item Quantity
+// Увеличение количества товара
 function increaseItemQuantity(index) {
   cart.items[index].quantity++
   updateCart()
 }
 
-// Remove Cart Item
+// Удаление товара из корзины
 function removeCartItem(index) {
   cart.items.splice(index, 1)
   updateCart()
 }
 
-// Apply Promo Code
+// Применение промокода
 function applyPromoCode(code) {
-  // In a real app, this would validate the promo code with an API
-  // For demo purposes, we'll use a simple check
-
   if (code.toUpperCase() === "WELCOME50" && !cart.promoApplied) {
-    // 50% off discount
     cart.discount = cart.subtotal * 0.5
     cart.promoApplied = true
     updateCart()
-    showToast("Promo code applied: 50% off")
+    showToast("Промокод применён: скидка 50%")
     return true
   } else if (code.toUpperCase() === "FREESHIP" && !cart.promoApplied) {
-    // Free shipping
     cart.discount = cart.deliveryFee
     cart.promoApplied = true
     updateCart()
-    showToast("Promo code applied: Free delivery")
+    showToast("Промокод применён: Бесплатная доставка")
     return true
   } else if (cart.promoApplied) {
-    showToast("A promo code has already been applied")
+    showToast("Промокод уже применён")
     return false
   } else {
-    showToast("Invalid promo code")
+    showToast("Неверный промокод")
     return false
   }
 }
 
-// Save Cart to localStorage
+// Сохранение корзины в localStorage
 function saveCart() {
   localStorage.setItem("cart", JSON.stringify(cart))
 
-  // Update cart count in header
   const cartCount = document.getElementById("cartCount")
   if (cartCount) {
     const totalItems = cart.items.reduce((total, item) => total + item.quantity, 0)
@@ -862,7 +825,7 @@ function saveCart() {
   }
 }
 
-// Load Cart from localStorage
+// Загрузка корзины из localStorage
 function loadCart() {
   const savedCart = localStorage.getItem("cart")
   if (savedCart) {
@@ -872,22 +835,18 @@ function loadCart() {
   }
 }
 
-// Show Toast Message
+// Показать уведомление
 function showToast(message) {
-  // Create toast element
   const toast = document.createElement("div")
   toast.className = "toast"
   toast.textContent = message
 
-  // Add toast to body
   document.body.appendChild(toast)
 
-  // Show toast
   setTimeout(() => {
     toast.classList.add("show")
   }, 100)
 
-  // Hide toast after 3 seconds
   setTimeout(() => {
     toast.classList.remove("show")
     setTimeout(() => {
@@ -896,14 +855,12 @@ function showToast(message) {
   }, 3000)
 }
 
-// Setup Event Listeners
+// Настройка обработчиков событий
 function setupEventListeners() {
-  // Modal close button
   if (modalClose) {
     modalClose.addEventListener("click", closeItemModal)
   }
 
-  // Close modal when clicking outside
   if (itemModal) {
     itemModal.addEventListener("click", (e) => {
       if (e.target === itemModal) {
@@ -912,7 +869,6 @@ function setupEventListeners() {
     })
   }
 
-  // Apply promo code
   if (applyPromo && promoCode) {
     applyPromo.addEventListener("click", () => {
       const code = promoCode.value.trim()
@@ -932,15 +888,12 @@ function setupEventListeners() {
     })
   }
 
-  // Checkout button
   if (checkoutBtn) {
     checkoutBtn.addEventListener("click", () => {
-      // In a real app, this would navigate to the checkout page
-      alert("In a real app, this would navigate to the checkout page")
+      <audio id="audio" src="uzbeki-kushaiut.mp3"> </audio>
     })
   }
 }
 
-// Initialize page when DOM is loaded
+// Инициализация при загрузке DOM
 document.addEventListener("DOMContentLoaded", initRestaurantPage)
-
