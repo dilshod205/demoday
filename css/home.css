@@ -1,6 +1,6 @@
 /* Hero Section */
 .hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/placeholder.svg?height=600&width=1200");
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/34/a7/c0/bar.jpg");
   background-size: cover;
   background-position: center;
   color: white;
