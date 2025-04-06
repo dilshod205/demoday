@@ -5,6 +5,9 @@
   background-position: center;
   position: relative;
 }
+body{
+  bacround:https://img.freepik.com/premium-photo/wood-table-blur-background-modern-restaurant_31965-1653.jpg?semt=ais_hybrid&w=740 ;
+}
 
 .restaurant-hero::before {
   content: "";
